@@ -1,16 +1,16 @@
-import { ImageResponse } from "next/og";
+import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
 
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
-  const inter = await fetch(
+  /* const inter = await fetch(
     new URL("@/styles/Inter-Regular.ttf", import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   const interBold = await fetch(
     new URL("@/public/_static/Inter-Bold.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
+  ).then((res) => res.arrayBuffer()); */
 
   const year = req.nextUrl.searchParams.get("year") || "2024";
   const minutesSpentOnDocs =
@@ -77,7 +77,7 @@ export async function GET(req: NextRequest) {
       headers: {
         "Cache-Control": "public, max-age=3600, immutable",
       },
-      fonts: [
+      /*fonts: [
         {
           name: "Inter",
           data: inter,
@@ -90,7 +90,7 @@ export async function GET(req: NextRequest) {
           weight: 700,
           style: "normal",
         },
-      ],
+      ], */
     },
   );
 }
