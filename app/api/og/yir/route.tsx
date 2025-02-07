@@ -15,10 +15,6 @@ export async function GET(req: NextRequest) {
   const year = req.nextUrl.searchParams.get("year") || "2024";
   const minutesSpentOnDocs =
     req.nextUrl.searchParams.get("minutesSpentOnDocs") || "1000";
-  const uploadedDocuments =
-    req.nextUrl.searchParams.get("uploadedDocuments") || "100";
-  const sharedLinks = req.nextUrl.searchParams.get("sharedLinks") || "10";
-  const receivedViews = req.nextUrl.searchParams.get("receivedViews") || "1000";
 
   return new ImageResponse(
     (
