@@ -2,7 +2,10 @@ import { useState } from "react";
 
 import { LinkAudienceType, LinkType } from "@prisma/client";
 
-import { UpgradePlanModal } from "@/components/billing/upgrade-plan-modal";
+import {
+  PlanEnum,
+  UpgradePlanModal,
+} from "@/components/billing/upgrade-plan-modal";
 import { DEFAULT_LINK_TYPE } from "@/components/links/link-sheet";
 import AllowDownloadSection from "@/components/links/link-sheet/allow-download-section";
 import AllowListSection from "@/components/links/link-sheet/allow-list-section";
@@ -22,7 +25,6 @@ import useLimits from "@/lib/swr/use-limits";
 import AgreementSection from "./agreement-section";
 import CustomFieldsSection from "./custom-fields-section";
 import QuestionSection from "./question-section";
-import ScreenShieldSection from "./screen-shield-section";
 import ScreenshotProtectionSection from "./screenshot-protection-section";
 import WatermarkSection from "./watermark-section";
 
@@ -57,9 +59,7 @@ export const LinkOptions = ({
 
   const [openUpgradeModal, setOpenUpgradeModal] = useState<boolean>(false);
   const [trigger, setTrigger] = useState<string>("");
-  const [upgradePlan, setUpgradePlan] = useState<
-    "Pro" | "Business" | "Data Rooms"
-  >("Business");
+  const [upgradePlan, setUpgradePlan] = useState<PlanEnum>(PlanEnum.Business);
 
   const handleUpgradeStateChange = ({
     state,
@@ -69,7 +69,7 @@ export const LinkOptions = ({
     setOpenUpgradeModal(state);
     setTrigger(trigger);
     if (plan) {
-      setUpgradePlan(plan);
+      setUpgradePlan(plan as PlanEnum);
     }
   };
 
@@ -129,11 +129,6 @@ export const LinkOptions = ({
           isBusiness ||
           isDatarooms
         }
-        handleUpgradeStateChange={handleUpgradeStateChange}
-      />
-      <ScreenShieldSection
-        {...{ data, setData }}
-        isAllowed={isTrial || isBusiness || isDatarooms}
         handleUpgradeStateChange={handleUpgradeStateChange}
       />
       <WatermarkSection
