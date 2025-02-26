@@ -144,7 +144,7 @@ export default function Branding() {
                 Branding
               </h1>
               <p className="text-xs text-muted-foreground sm:text-sm">
-                Customize how your brand appears globally across Papermark
+                Customize how your brand appears globally across Getpixcel
                 documents your visitors see.
               </p>
             </div>

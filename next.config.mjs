@@ -158,7 +158,7 @@ function prepareRemotePatterns() {
   let patterns = [
     // static images and videos
     { protocol: "https", hostname: "assets.getpixcel.com" },
-    { protocol: "https", hostname: "cdn.papermarkassets.com" },
+    { protocol: "https", hostname: "cdn.getpixcelassets.com" },
     { protocol: "https", hostname: "d2kgph70pw5d9n.cloudfront.net" },
     // twitter img
     { protocol: "https", hostname: "pbs.twimg.com" },
@@ -166,7 +166,7 @@ function prepareRemotePatterns() {
     { protocol: "https", hostname: "media.licdn.com" },
     // google img
     { protocol: "https", hostname: "lh3.googleusercontent.com" },
-    // papermark img
+    // getpixcel img
     { protocol: "https", hostname: "www.getpixcel.com" },
     { protocol: "https", hostname: "app.getpixcel.com" },
     // useragent img

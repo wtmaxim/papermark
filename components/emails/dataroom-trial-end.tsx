@@ -29,7 +29,7 @@ const DataroomTrialEnd = ({ name }: DataroomTrialEnd) => {
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 w-[465px] p-5">
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Getpixcel</span>
             </Text>
             <Text className="font-seminbold mx-0 mb-8 mt-4 p-0 text-center text-xl">
               Your dataroom trial has expired
@@ -38,7 +38,7 @@ const DataroomTrialEnd = ({ name }: DataroomTrialEnd) => {
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm leading-6 text-black">
-              Your Papermark dataroom trial has expired.{" "}
+              Your Getpixcel dataroom trial has expired.{" "}
               <Link href={`https://app.getpixcel.com/settings/billing`}>
                 Upgrade now
               </Link>{" "}

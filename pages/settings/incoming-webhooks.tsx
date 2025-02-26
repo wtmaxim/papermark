@@ -119,7 +119,7 @@ export default function WebhookSettings() {
               </div>
               <p className="text-sm text-gray-500">
                 Create incoming webhooks to receive data from external services
-                and automatically create new documents in Papermark.
+                and automatically create new documents in Getpixcel.
               </p>
             </div>
           </div>

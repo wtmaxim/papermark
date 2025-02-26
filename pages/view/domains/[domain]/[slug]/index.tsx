@@ -222,7 +222,7 @@ export default function ViewPage({
     // Retrieve token from cookie on component mount
     const cookieToken =
       Cookies.get("pm_vft") || Cookies.get(`pm_drs_flag_${router.query.slug}`);
-    const storedEmail = window.localStorage.getItem("papermark.email");
+    const storedEmail = window.localStorage.getItem("getpixcel.email");
     if (cookieToken) {
       setStoredToken(cookieToken);
       if (storedEmail) {
@@ -262,8 +262,8 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.document?.name} | Powered by Papermark` ??
-              "Document powered by Papermark"
+              `${link?.document?.name} | Powered by Getpixcel` ??
+              "Document powered by Getpixcel"
             }
             description={meta.metaDescription ?? null}
             imageUrl={meta.metaImage ?? null}
@@ -307,8 +307,8 @@ export default function ViewPage({
           enableBranding={meta.enableCustomMetatag ?? false}
           title={
             meta.metaTitle ??
-            `${link?.document?.name} | Powered by Papermark` ??
-            "Document powered by Papermark"
+            `${link?.document?.name} | Powered by Getpixcel` ??
+            "Document powered by Getpixcel"
           }
           description={meta.metaDescription ?? null}
           imageUrl={meta.metaImage ?? null}
@@ -343,8 +343,8 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.dataroom?.name} | Powered by Papermark` ??
-              "Dataroom powered by Papermark"
+              `${link?.dataroom?.name} | Powered by Getpixcel` ??
+              "Dataroom powered by Getpixcel"
             }
             description={meta.metaDescription ?? null}
             imageUrl={meta.metaImage ?? null}
@@ -389,8 +389,8 @@ export default function ViewPage({
           enableBranding={meta.enableCustomMetatag ?? false}
           title={
             meta.metaTitle ??
-            `${link?.dataroom?.name} | Powered by Papermark` ??
-            "Dataroom powered by Papermark"
+            `${link?.dataroom?.name} | Powered by Getpixcel` ??
+            "Dataroom powered by Getpixcel"
           }
           description={meta.metaDescription ?? null}
           imageUrl={meta.metaImage ?? null}

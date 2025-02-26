@@ -25,7 +25,7 @@ import { mutate } from "swr";
 
 import FileUp from "@/components/shared/icons/file-up";
 import MoreVertical from "@/components/shared/icons/more-vertical";
-import PapermarkSparkle from "@/components/shared/icons/papermark-sparkle";
+import GetpixcelSparkle from "@/components/shared/icons/getpixcel-sparkle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -205,7 +205,7 @@ export default function DocumentHeader({
         }),
         {
           loading: "Activating Assistant...",
-          success: "Papermark Assistant successfully activated.",
+          success: "Getpixcel Assistant successfully activated.",
           error: "Activation failed. Please try again.",
         },
       );
@@ -231,7 +231,7 @@ export default function DocumentHeader({
 
     toast.promise(fetchPromise, {
       loading: `${active ? "Activating" : "Deactivating"} Assistant...`,
-      success: `Papermark Assistant successfully ${active ? "activated" : "deactivated"}.`,
+      success: `Getpixcel Assistant successfully ${active ? "activated" : "deactivated"}.`,
       error: `${active ? "Activation" : "Deactivation"} failed. Please try again.`,
     });
   };
@@ -608,7 +608,7 @@ export default function DocumentHeader({
                 onClick={() => activateOrRedirectAssistant(prismaDocument)}
                 title="Open AI Assistant"
               >
-                <PapermarkSparkle className="h-5 w-5" />
+                <GetpixcelSparkle className="h-5 w-5" />
               </Button>
             )}
 
@@ -686,7 +686,7 @@ export default function DocumentHeader({
                           activateOrRedirectAssistant(prismaDocument)
                         }
                       >
-                        <PapermarkSparkle className="mr-2 h-4 w-4" />
+                        <GetpixcelSparkle className="mr-2 h-4 w-4" />
                         Open AI Assistant
                       </DropdownMenuItem>
                     </>

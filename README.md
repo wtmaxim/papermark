@@ -1,8 +1,8 @@
 <div align="center">
-  <h1 align="center">Papermark</h1>
+  <h1 align="center">Getpixcel</h1>
   <h3>The open-source DocSend alternative.</h3>
 
-<a target="_blank" href="https://www.producthunt.com/posts/papermark-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-papermark"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=411605&amp;theme=light&amp;period=daily" alt="Papermark - The open-source DocSend alternative | Product Hunt" style="width:250px;height:40px"></a>
+<a target="_blank" href="https://www.producthunt.com/posts/getpixcel-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-getpixcel"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=411605&amp;theme=light&amp;period=daily" alt="Getpixcel - The open-source DocSend alternative | Product Hunt" style="width:250px;height:40px"></a>
 
 </div>
 
@@ -13,14 +13,14 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/mfts/papermark/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mfts/papermark"></a>
-  <a href="https://twitter.com/papermarkio"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/papermarkio"></a>
-  <a href="https://github.com/mfts/papermark/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
+  <a href="https://github.com/mfts/getpixcel/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mfts/getpixcel"></a>
+  <a href="https://twitter.com/getpixcelio"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/getpixcelio"></a>
+  <a href="https://github.com/mfts/getpixcel/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-purple"></a>
 </div>
 
 <br/>
 
-Papermark is the open-source document-sharing alternative to DocSend, featuring built-in analytics and custom domains.
+Getpixcel is the open-source document-sharing alternative to DocSend, featuring built-in analytics and custom domains.
 
 ## Features
 
@@ -31,7 +31,7 @@ Papermark is the open-source document-sharing alternative to DocSend, featuring 
 
 ## Demo
 
-![Papermark Welcome GIF](.github/images/papermark-welcome.gif)
+![Getpixcel Welcome GIF](.github/images/getpixcel-welcome.gif)
 
 ## Tech Stack
 
@@ -51,7 +51,7 @@ Papermark is the open-source document-sharing alternative to DocSend, featuring 
 
 ### Prerequisites
 
-Here's what you need to run Papermark:
+Here's what you need to run Getpixcel:
 
 - Node.js (version >= 18.17.0)
 - PostgreSQL Database
@@ -61,8 +61,8 @@ Here's what you need to run Papermark:
 ### 1. Clone the repository
 
 ```shell
-git clone https://github.com/mfts/papermark.git
-cd papermark
+git clone https://github.com/mfts/getpixcel.git
+cd getpixcel
 ```
 
 ### 2. Install npm dependencies
@@ -119,19 +119,19 @@ To prepare the Tinybird database, follow these steps:
 pipenv shell
 ## start: pkgx-specific
 cd ..
-cd papermark
+cd getpixcel
 ## end: pkgx-specific
 pipenv update tinybird-cli
 ```
 
 ## Contributing
 
-Papermark is an open-source project, and we welcome contributions from the community.
+Getpixcel is an open-source project, and we welcome contributions from the community.
 
 If you'd like to contribute, please fork the repository and make any changes you'd like. Pull requests are warmly welcome.
 
 ### Our Contributors ✨
 
-<a href="https://github.com/mfts/papermark/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mfts/papermark" />
+<a href="https://github.com/mfts/getpixcel/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mfts/getpixcel" />
 </a>

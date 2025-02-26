@@ -59,8 +59,8 @@ export default function WebhookSettings() {
                 Webhooks
               </h3>
               <p className="flex flex-row items-center gap-2 text-sm text-muted-foreground">
-                Send data to external services when events happen in Papermark
-                <BadgeTooltip content="Send data to external services when events happen in Papermark">
+                Send data to external services when events happen in Getpixcel
+                <BadgeTooltip content="Send data to external services when events happen in Getpixcel">
                   <CircleHelpIcon className="h-4 w-4 shrink-0 text-muted-foreground hover:text-foreground" />
                 </BadgeTooltip>
               </p>

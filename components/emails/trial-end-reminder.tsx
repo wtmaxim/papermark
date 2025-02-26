@@ -18,7 +18,7 @@ interface TrialEndReminderEmail {
 }
 
 const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
-  const previewText = `Upgrade to Papermark Pro`;
+  const previewText = `Upgrade to Getpixcel Pro`;
 
   return (
     <Html>
@@ -28,7 +28,7 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 w-[465px] p-5">
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Getpixcel</span>
             </Text>
             <Text className="font-seminbold mx-0 mb-8 mt-4 p-0 text-center text-xl">
               Your pro trial is almost over
@@ -37,7 +37,7 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm leading-6 text-black">
-              Your Papermark Pro trial is almost over. If you want to continue
+              Your Getpixcel Pro trial is almost over. If you want to continue
               enjoying the Pro features, please consider upgrading your plan.
             </Text>
             <Text className="text-sm leading-6 text-black">
@@ -69,7 +69,7 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
               will be <span className="text-red-500 underline">disabled</span>{" "}
               after your trial.
             </Text>
-            <Text className="text-sm text-gray-400">Marc from Papermark</Text>
+            <Text className="text-sm text-gray-400">Marc from Getpixcel</Text>
             <Hr />
             <Section className="mt-8 text-gray-400">
               <Text className="text-xs">

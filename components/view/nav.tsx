@@ -30,7 +30,7 @@ import {
 
 import { determineTextColor } from "@/lib/utils/determine-text-color";
 
-import PapermarkSparkle from "../shared/icons/papermark-sparkle";
+import GetpixcelSparkle from "../shared/icons/getpixcel-sparkle";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -146,11 +146,11 @@ export default function Nav({
                 />
               ) : (
                 <Link
-                  href={`https://www.getpixcel.com?utm_campaign=navbar&utm_medium=navbar&utm_source=papermark-${linkId}`}
+                  href={`https://www.getpixcel.com?utm_campaign=navbar&utm_medium=navbar&utm_source=getpixcel-${linkId}`}
                   target="_blank"
                   className="text-2xl font-bold tracking-tighter text-white"
                 >
-                  Papermark
+                  Getpixcel
                 </Link>
               )}
             </div>
@@ -228,7 +228,7 @@ export default function Nav({
                   }}
                   title="Open AI Document Assistant"
                 >
-                  <PapermarkSparkle className="h-5 w-5" />
+                  <GetpixcelSparkle className="h-5 w-5" />
                 </Button>
               </Link>
             ) : null}

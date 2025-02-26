@@ -19,7 +19,7 @@ import {
 
 import { timeAgo } from "@/lib/utils";
 
-import PapermarkSparkle from "../../shared/icons/papermark-sparkle";
+import GetpixcelSparkle from "../../shared/icons/getpixcel-sparkle";
 import { Button } from "../../ui/button";
 import { TDocumentData } from "./dataroom-view";
 
@@ -118,7 +118,7 @@ export default function DataroomNav({
                   target="_blank"
                   className="text-2xl font-bold tracking-tighter text-white"
                 >
-                  Papermark
+                  Getpixcel
                 </Link>
               )}
             </div>
@@ -176,7 +176,7 @@ export default function DataroomNav({
                   }}
                   title="Open AI Document Assistant"
                 >
-                  <PapermarkSparkle className="h-5 w-5" />
+                  <GetpixcelSparkle className="h-5 w-5" />
                 </Button>
               </Link>
             ) : null}

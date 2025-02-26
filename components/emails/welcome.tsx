@@ -30,13 +30,13 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
           <Container className="mx-auto my-10 w-[465px] p-5">
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
               Welcome to{" "}
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Getpixcel</span>
             </Text>
             <Text className="text-sm">
               Thanks for signing up{name && `, ${name}`}!
             </Text>
             <Text className="text-sm">
-              My name is Marc, and I&apos;m the creator of Papermark – the
+              My name is Marc, and I&apos;m the creator of Getpixcel – the
               open-source DocSend alternative! I&apos;m excited to have you on
               board!
             </Text>
@@ -72,7 +72,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                   <li>
                     Star the repo on{" "}
                     <Link
-                      href="https://github.com/mfts/papermark"
+                      href="https://github.com/mfts/getpixcel"
                       target="_blank"
                     >
                       GitHub
@@ -80,13 +80,13 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                   </li>
                   <li>
                     Follow the journey on{" "}
-                    <Link href="https://x.com/papermarkio" target="_blank">
+                    <Link href="https://x.com/getpixcelio" target="_blank">
                       Twitter
                     </Link>
                   </li>
                      <li>
                     Have a call to talk enterprise{" "}
-                    <Link href="https://cal.com/marcseitz/papermark" target="_blank">
+                    <Link href="https://cal.com/marcseitz/getpixcel" target="_blank">
                       Book
                     </Link>
                   </li>
@@ -98,7 +98,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                 If you have any questions or feedback just respond to this email. I&apos;m
                 always happy to help!
               </Text>
-              <Text className="text-sm text-gray-400">Marc from Papermark</Text>
+              <Text className="text-sm text-gray-400">Marc from Getpixcel</Text>
             </Section>
             <Hr />
             <Section className="mt-8 text-gray-400">
@@ -113,7 +113,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                 </a>
               </Text>
               <Text className="text-xs">
-                You will shortly receive the intro to Papermark. Stay tuned.
+                You will shortly receive the intro to Getpixcel. Stay tuned.
               </Text>
             </Section>
           </Container>

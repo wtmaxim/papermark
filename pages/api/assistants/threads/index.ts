@@ -48,7 +48,7 @@ export default async function handle(
             messages: [
               {
                 role: "user",
-                content: "Initializing conversation with Papermark Assistant",
+                content: "Initializing conversation with Getpixcel Assistant",
                 file_ids: [documentVersion?.fileId || ""],
                 metadata: { intitialMessage: true },
               },

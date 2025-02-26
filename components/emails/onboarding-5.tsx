@@ -24,13 +24,13 @@ const Onboarding3Email = () => {
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 w-[465px] p-5">
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Getpixcel</span>
             </Text>
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
               Virtual Data Rooms
             </Text>
             <Text className="text-sm">Unlimited branded data rooms!</Text>
-            <Text className="text-sm">With Papermark Data Rooms you can:</Text>
+            <Text className="text-sm">With Getpixcel Data Rooms you can:</Text>
             <Text className="text-sm">
               <ul className="list-inside list-disc text-sm">
                 <li>Share data rooms with one link</li>
@@ -45,7 +45,7 @@ const Onboarding3Email = () => {
                 <li>Build self-hosted expereince</li>
               </ul>
               <Text className="text-sm">
-                All about Papermark{" "}
+                All about Getpixcel{" "}
                 <a
                   href="https://www.getpixcel.com/data-room"
                   className="text-blue-500 underline"
@@ -66,10 +66,10 @@ const Onboarding3Email = () => {
               </Button>
             </Section>
             <Text className="text-sm">
-              If you want to self-host Papermark, and build fully customizable
+              If you want to self-host Getpixcel, and build fully customizable
               experience{" "}
               <a
-                href="https://cal.com/marcseitz/papermark"
+                href="https://cal.com/marcseitz/getpixcel"
                 className="text-blue-500 underline"
               >
                 book a call

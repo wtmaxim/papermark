@@ -106,5 +106,5 @@ export const webhookCallbackSchema = z.object({
   createdAt: z.number(),
   sourceMessageId: z.string(),
   body: z.string().optional().default(""), // Response from the original webhook URL
-  sourceBody: z.string(), // Original request payload from Papermark
+  sourceBody: z.string(), // Original request payload from Getpixcel
 });

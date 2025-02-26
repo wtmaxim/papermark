@@ -80,7 +80,7 @@ export default function ViewDurationSummary({
             Thanks for creating an account!
           </h1>
           <p className="max-w-lg text-balance text-white">
-            We sent you an email confirmation with a link to your Papermark
+            We sent you an email confirmation with a link to your Getpixcel
             account.
           </p>
         </motion.div>
@@ -191,7 +191,7 @@ export default function ViewDurationSummary({
           </form>
           <p className="mt-4 w-full max-w-md px-4 text-xs text-muted-foreground sm:px-16">
             By clicking continue, you acknowledge that you have read and agree
-            to Papermark&apos;s{" "}
+            to Getpixcel&apos;s{" "}
             <Link href="/terms" target="_blank" className="underline">
               Terms of Service
             </Link>{" "}

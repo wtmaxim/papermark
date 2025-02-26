@@ -241,12 +241,12 @@ export function UploadContainer({
               className="px-0 text-xs font-normal text-muted-foreground underline hover:text-gray-700"
               onClick={async () => {
                 const response = await fetch(
-                  "/_example/papermark-example-document.pdf",
+                  "/_example/getpixcel-example-document.pdf",
                 );
                 const blob = await response.blob();
                 const file = new File(
                   [blob],
-                  "papermark-example-document.pdf",
+                  "getpixcel-example-document.pdf",
                   {
                     type: "application/pdf",
                   },

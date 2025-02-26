@@ -26,21 +26,21 @@ export default function App({
   return (
     <>
       <Head>
-        <title>Papermark | The Open Source DocSend Alternative</title>
+        <title>Getpixcel | The Open Source DocSend Alternative</title>
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Papermark is an open-source document sharing alternative to DocSend with built-in analytics."
+          content="Getpixcel is an open-source document sharing alternative to DocSend with built-in analytics."
           key="description"
         />
         <meta
           property="og:title"
-          content="Papermark | The Open Source DocSend Alternative"
+          content="Getpixcel | The Open Source DocSend Alternative"
           key="og-title"
         />
         <meta
           property="og:description"
-          content="Papermark is an open-source document sharing alternative to DocSend with built-in analytics."
+          content="Getpixcel is an open-source document sharing alternative to DocSend with built-in analytics."
           key="og-description"
         />
         <meta
@@ -55,12 +55,12 @@ export default function App({
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@papermarkio" />
-        <meta name="twitter:creator" content="@papermarkio" />
-        <meta name="twitter:title" content="Papermark" key="tw-title" />
+        <meta name="twitter:site" content="@getpixcelio" />
+        <meta name="twitter:creator" content="@getpixcelio" />
+        <meta name="twitter:title" content="Getpixcel" key="tw-title" />
         <meta
           name="twitter:description"
-          content="Papermark is an open-source document sharing alternative to DocSend with built-in analytics."
+          content="Getpixcel is an open-source document sharing alternative to DocSend with built-in analytics."
           key="tw-description"
         />
         <meta
