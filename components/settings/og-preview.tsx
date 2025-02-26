@@ -33,7 +33,7 @@ export default function Preview({
     metaFavicon: favicon,
   } = data;
 
-  const hostname = "papermark.io";
+  const hostname = "getpixcel.com";
 
   return (
     <div>

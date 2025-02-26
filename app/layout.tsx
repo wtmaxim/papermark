@@ -15,7 +15,7 @@ const data = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.papermark.io"),
+  metadataBase: new URL("https://www.getpixcel.com"),
   title: data.title,
   description: data.description,
   openGraph: {
@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <PlausibleProvider
-          domain="papermark.io"
+          domain="getpixcel.com"
           enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === "production"}
         />
       </head>

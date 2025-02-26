@@ -63,11 +63,11 @@ export default function TeamInvitation({
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.getpixcel.com"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  getpixcel.com
                 </a>
               </Text>
               <Text className="text-xs">

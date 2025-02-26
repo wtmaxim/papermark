@@ -14,7 +14,7 @@ import {
 } from "@react-email/components";
 
 export default function EmailVerification({
-  verificationURL = "papermark.io",
+  verificationURL = "getpixcel.com",
   email = "test@test.com",
   isDataroom = false,
 }: {
@@ -59,11 +59,11 @@ export default function EmailVerification({
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.getpixcel.com"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  getpixcel.com
                 </a>
               </Text>
               <Text className="text-xs">

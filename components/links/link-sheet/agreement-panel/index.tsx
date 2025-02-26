@@ -98,7 +98,7 @@ export default function AgreementSheet({
         const linkId = document.links[0].id;
         setData((prevData) => ({
           ...prevData,
-          link: "https://www.papermark.io/view/" + linkId,
+          link: "https://www.getpixcel.com/view/" + linkId,
         }));
       }
     } catch (error) {
@@ -207,7 +207,7 @@ export default function AgreementSheet({
                     required
                     autoComplete="off"
                     data-1p-ignore
-                    placeholder="https://www.papermark.io/nda"
+                    placeholder="https://www.getpixcel.com/nda"
                     value={data.link || ""}
                     onChange={(e) =>
                       setData({

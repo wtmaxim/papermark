@@ -24,9 +24,9 @@ export default async function DomainMiddleware(req: NextRequest) {
     response.headers.set("X-Robots-Tag", "noindex");
     return response;
   } else {
-    // redirect plain custom domain to papermark.io, eventually to it's own landing page
+    // redirect plain custom domain to getpixcel.com, eventually to it's own landing page
     return NextResponse.redirect(
-      new URL("https://www.papermark.io/home", req.url),
+      new URL("https://www.getpixcel.com/home", req.url),
     );
   }
 }
