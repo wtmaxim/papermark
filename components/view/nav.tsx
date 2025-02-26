@@ -30,7 +30,7 @@ import {
 
 import { determineTextColor } from "@/lib/utils/determine-text-color";
 
-import GetpixcelSparkle from "../shared/icons/getpixcel-sparkle";
+import PapermarkSparkle from "../shared/icons/papermark-sparkle";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -228,7 +228,7 @@ export default function Nav({
                   }}
                   title="Open AI Document Assistant"
                 >
-                  <GetpixcelSparkle className="h-5 w-5" />
+                  <PapermarkSparkle className="h-5 w-5" />
                 </Button>
               </Link>
             ) : null}

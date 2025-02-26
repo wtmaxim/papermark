@@ -25,7 +25,7 @@ import { mutate } from "swr";
 
 import FileUp from "@/components/shared/icons/file-up";
 import MoreVertical from "@/components/shared/icons/more-vertical";
-import GetpixcelSparkle from "@/components/shared/icons/getpixcel-sparkle";
+import PapermarkSparkle from "@/components/shared/icons/papermark-sparkle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -53,6 +53,7 @@ import { ButtonTooltip } from "../ui/tooltip";
 import { AddDocumentModal } from "./add-document-modal";
 import { AddToDataroomModal } from "./add-document-to-dataroom-modal";
 import AlertBanner from "./alert";
+import { P } from "ts-pattern";
 
 export default function DocumentHeader({
   prismaDocument,
@@ -608,7 +609,7 @@ export default function DocumentHeader({
                 onClick={() => activateOrRedirectAssistant(prismaDocument)}
                 title="Open AI Assistant"
               >
-                <GetpixcelSparkle className="h-5 w-5" />
+                <PapermarkSparkle className="h-5 w-5" />
               </Button>
             )}
 
@@ -686,7 +687,7 @@ export default function DocumentHeader({
                           activateOrRedirectAssistant(prismaDocument)
                         }
                       >
-                        <GetpixcelSparkle className="mr-2 h-4 w-4" />
+                        <PapermarkSparkle className="mr-2 h-4 w-4" />
                         Open AI Assistant
                       </DropdownMenuItem>
                     </>
