@@ -70,8 +70,11 @@ const getFileFromS3 = async (key: string) => {
     typeof window === "undefined" && !!process.env.INTERNAL_API_KEY;
 
   if (isServer) {
+    // Fallback pour éviter l'erreur "undefined" en production
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://papermark-c4u8.vercel.app";
+    
     return fetchPresignedUrl(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/get-presigned-get-url`,
+      `${baseUrl}/api/file/s3/get-presigned-get-url`,
       {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.INTERNAL_API_KEY}`,
