@@ -61,8 +61,11 @@ export const convertPdfToImageRoute = task({
       // 3. send file to api/convert endpoint in a task and get back number of pages
       logger.info("Sending file to api/get-pages endpoint");
 
+      // Fallback pour éviter l'erreur "undefined" en production
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://papermark-c4u8.vercel.app";
+      
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/mupdf/get-pages`,
+        `${baseUrl}/api/mupdf/get-pages`,
         {
           method: "POST",
           body: JSON.stringify({ url: signedUrl }),
@@ -116,7 +119,7 @@ export const convertPdfToImageRoute = task({
       try {
         // send page number to api/convert-page endpoint in a task and get back page img url
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/api/mupdf/convert-page`,
+          `${baseUrl}/api/mupdf/convert-page`,
           {
             method: "POST",
             body: JSON.stringify({
