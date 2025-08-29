@@ -17,7 +17,7 @@ export default async function handler(
   // Set the cookie for the other domain
   res.setHeader(
     "Set-Cookie",
-    `${VERCEL_DEPLOYMENT ? "__Secure-" : ""}next-auth.session-token=${req.cookies[`${VERCEL_DEPLOYMENT ? "__Secure-" : ""}next-auth.session-token`]}; HttpOnly; Path=/; SameSite=Lax; ${VERCEL_DEPLOYMENT ? "Secure; " : ""}Domain=.vercel.app; Max-Age=${30 * 24 * 60 * 60}`,
+    `${VERCEL_DEPLOYMENT ? "__Secure-" : ""}next-auth.session-token=${req.cookies[`${VERCEL_DEPLOYMENT ? "__Secure-" : ""}next-auth.session-token`]}; HttpOnly; Path=/; SameSite=Lax; ${VERCEL_DEPLOYMENT ? "Secure; " : ""}Domain=papermark-c4u8.vercel.app; Max-Age=${30 * 24 * 60 * 60}`,
   );
 
   res.status(200).end();
