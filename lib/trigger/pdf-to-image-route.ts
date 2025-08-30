@@ -41,6 +41,12 @@ export const convertPdfToImageRoute = task({
     updateStatus({ progress: 10, text: "Retrieving file..." });
 
     // 2. get signed url from file
+    if (!documentVersion.storageType) {
+      logger.error("Storage type is undefined", { documentVersion });
+      updateStatus({ progress: 0, text: "Invalid storage type" });
+      return;
+    }
+
     const signedUrl = await getFile({
       type: documentVersion.storageType,
       data: documentVersion.file,
@@ -217,7 +223,7 @@ export const convertPdfToImageRoute = task({
 
     // initialize link revalidation for all the document's links
     await fetch(
-      `${process.env.NEXTAUTH_URL}/api/revalidate?secret=${process.env.REVALIDATE_TOKEN}&documentId=${documentId}`,
+      `${baseUrl}/api/revalidate?secret=${process.env.REVALIDATE_TOKEN}&documentId=${documentId}`,
     );
 
     updateStatus({
