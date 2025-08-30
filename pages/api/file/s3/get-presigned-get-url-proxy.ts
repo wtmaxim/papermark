@@ -59,7 +59,7 @@ export default async function handler(
     const baseUrl = process.env.NEXTAUTH_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://papermark-c4u8.vercel.app";
     
     const response = await fetch(
-      `${baseUrl}/api/file/s3/get-presigned-get-url`,
+      `https://papermark-c4u8.vercel.app/api/file/s3/get-presigned-get-url`,
       {
         method: "POST",
         headers: {
