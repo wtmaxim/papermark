@@ -72,7 +72,7 @@ const getFileFromS3 = async (key: string) => {
   if (isServer) {
     // URL hardcodée pour éviter l'erreur "undefined" en production
     return fetchPresignedUrl(
-      "https://papermark-c4u8.vercel.app/api/file/s3/get-presigned-get-url",
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/get-presigned-get-url`,
       {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.INTERNAL_API_KEY}`,
@@ -82,7 +82,7 @@ const getFileFromS3 = async (key: string) => {
   } else {
     // URL hardcodée pour éviter l'erreur "undefined" en production
     return fetchPresignedUrl(
-      "https://papermark-c4u8.vercel.app/api/file/s3/get-presigned-get-url-proxy",
+      `/api/file/s3/get-presigned-get-url-proxy`,
       {
         "Content-Type": "application/json",
       },

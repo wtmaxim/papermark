@@ -57,7 +57,7 @@ export default async function handler(
   try {
     // URL hardcodée pour éviter l'erreur "undefined" en production
     const response = await fetch(
-      "https://papermark-c4u8.vercel.app/api/file/s3/get-presigned-get-url",
+      `${process.env.NEXTAUTH_URL}/api/file/s3/get-presigned-get-url`,
       {
         method: "POST",
         headers: {

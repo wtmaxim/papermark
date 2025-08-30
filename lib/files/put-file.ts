@@ -127,7 +127,7 @@ const putFileSingle = async ({
   docId: string;
 }) => {
   const presignedResponse = await fetch(
-    "https://papermark-c4u8.vercel.app/api/file/s3/get-presigned-post-url",
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/get-presigned-post-url`,
     {
       method: "POST",
       headers: {
@@ -197,7 +197,7 @@ const putFileMultipart = async ({
   try {
     // Step 1: Initiate multipart upload
     const initiateResponse = await fetch(
-      "https://papermark-c4u8.vercel.app/api/file/s3/multipart",
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/multipart`,
       {
         method: "POST",
         headers: {
@@ -223,7 +223,7 @@ const putFileMultipart = async ({
 
     // Step 2: Get pre-signed URLs for parts
     const partUrlsResponse = await fetch(
-      "https://papermark-c4u8.vercel.app/api/file/s3/multipart",
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/multipart`,
       {
         method: "POST",
         headers: {
@@ -293,7 +293,7 @@ const putFileMultipart = async ({
 
     // Step 4: Complete multipart upload
     const completeResponse = await fetch(
-      "https://papermark-c4u8.vercel.app/api/file/s3/multipart",
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/file/s3/multipart`,
       {
         method: "POST",
         headers: {
