@@ -16,6 +16,16 @@ export const convertPdfToImageRoute = task({
   run: async (payload: ConvertPdfToImagePayload) => {
     const { documentVersionId, teamId, documentId, versionNumber } = payload;
 
+    // Debug: Vérifier les variables d'environnement AVANT tout
+    logger.info("=== ENVIRONMENT VARIABLES DEBUG ===", {
+      internalApiKeyExists: !!process.env.INTERNAL_API_KEY,
+      internalApiKeyLength: process.env.INTERNAL_API_KEY?.length || 0,
+      internalApiKeyPrefix: process.env.INTERNAL_API_KEY?.substring(0, 20) || "undefined",
+      nextPublicBaseUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      nextAuthUrl: process.env.NEXTAUTH_URL
+    });
+    logger.info("=====================================", {});
+
     updateStatus({ progress: 0, text: "Initializing..." });
 
     // 1. get file url from document version
@@ -47,12 +57,7 @@ export const convertPdfToImageRoute = task({
       return;
     }
 
-    // Debug: Vérifier les variables d'environnement
-    logger.info("Environment variables check", {
-      hasInternalApiKey: !!process.env.INTERNAL_API_KEY,
-      internalApiKeyLength: process.env.INTERNAL_API_KEY?.length || 0,
-      internalApiKeyPrefix: process.env.INTERNAL_API_KEY?.substring(0, 10) || "undefined"
-    });
+
 
     const signedUrl = await getFile({
       type: documentVersion.storageType,
