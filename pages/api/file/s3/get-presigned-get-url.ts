@@ -59,6 +59,9 @@ export default async function handler(
 
   const { key } = req.body as { key: string };
 
+  // DEBUG: Log la clé reçue
+  console.log("🔑 DEBUG: Received key", { key, teamId: key.split("/")[0] });
+
   try {
     // Extract teamId from key (format: teamId/docId/filename)
     const teamId = key.split("/")[0];
@@ -70,7 +73,14 @@ export default async function handler(
       return res.status(400).json({ error: "Invalid key format" });
     }
 
+    console.log("🏗️ DEBUG: Getting S3 client and config for teamId", { teamId });
     const { client, config } = await getTeamS3ClientAndConfig(teamId);
+    console.log("✅ DEBUG: S3 client and config retrieved", { 
+      hasClient: !!client, 
+      hasConfig: !!config,
+      distributionHost: config?.distributionHost,
+      bucket: config?.bucket
+    });
 
     if (config.distributionHost) {
       const distributionUrl = new URL(

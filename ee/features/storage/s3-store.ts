@@ -57,7 +57,7 @@ export class MultiRegionS3Store extends S3Store {
 
     // Initialize US configuration and client
     try {
-      this.usConfig = getStorageConfig("us-east-2");
+      this.usConfig = getStorageConfig("us-east-1");
 
       // Create US S3 client configuration (omit endpoint if empty/undefined)
       const usS3Config: any = {

@@ -14,17 +14,17 @@ export interface StorageConfig {
   lambdaFunctionName?: string;
 }
 
-export type StorageRegion = "eu-central-1" | "us-east-2";
+export type StorageRegion = "eu-central-1" | "us-east-2" | "us-east-1";
 
 /**
  * Gets AWS storage configuration based on the storage region.
  * Uses environment variables with _US suffix for US region, no suffix for EU region.
  *
- * @param storageRegion - The storage region ('us-east-2' for US, defaults to 'eu-central-1' for EU)
+ * @param storageRegion - The storage region ('us-east-2' or 'us-east-1' for US, defaults to 'eu-central-1' for EU)
  * @returns StorageConfig object with all necessary AWS configuration
  */
 export function getStorageConfig(storageRegion?: string): StorageConfig {
-  const isUS = storageRegion === "us-east-2";
+  const isUS = storageRegion === "us-east-2" || storageRegion === "us-east-1";
   const suffix = isUS ? "_US" : "";
 
   // Get base environment variables with optional suffix
@@ -57,7 +57,7 @@ export function getStorageConfig(storageRegion?: string): StorageConfig {
 
   const getRegion = () => {
     const regionVar = `NEXT_PRIVATE_UPLOAD_REGION${suffix}`;
-    return process.env[regionVar] || (isUS ? "us-east-2" : "eu-central-1");
+    return process.env[regionVar] || (isUS ? "us-east-1" : "eu-central-1");
   };
 
   return {
@@ -94,7 +94,7 @@ export async function getTeamStorageConfigById(
     const features = await getFeatureFlags({ teamId });
 
     // If team has usStorage feature flag enabled, use US region
-    const storageRegion = features.usStorage ? "us-east-2" : undefined;
+    const storageRegion = features.usStorage ? "us-east-1" : undefined;
 
     return getStorageConfig(storageRegion);
   } catch (error) {
