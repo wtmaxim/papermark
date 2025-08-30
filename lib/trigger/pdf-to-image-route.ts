@@ -47,6 +47,13 @@ export const convertPdfToImageRoute = task({
       return;
     }
 
+    // Debug: Vérifier les variables d'environnement
+    logger.info("Environment variables check", {
+      hasInternalApiKey: !!process.env.INTERNAL_API_KEY,
+      internalApiKeyLength: process.env.INTERNAL_API_KEY?.length || 0,
+      internalApiKeyPrefix: process.env.INTERNAL_API_KEY?.substring(0, 10) || "undefined"
+    });
+
     const signedUrl = await getFile({
       type: documentVersion.storageType,
       data: documentVersion.file,
