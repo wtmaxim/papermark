@@ -16,6 +16,9 @@ export const convertPdfToImageRoute = task({
   run: async (payload: ConvertPdfToImagePayload) => {
     const { documentVersionId, teamId, documentId, versionNumber } = payload;
 
+    // TEST SIMPLE - Ce log doit s'afficher
+    logger.info("🚀 TÂCHE DÉMARRÉE - VERSION AVEC LOGS DE DEBUG", {});
+
     // Debug: Vérifier les variables d'environnement AVANT tout
     logger.info("=== ENVIRONMENT VARIABLES DEBUG ===", {
       internalApiKeyExists: !!process.env.INTERNAL_API_KEY,
