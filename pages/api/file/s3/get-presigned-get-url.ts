@@ -88,6 +88,17 @@ export default async function handler(
         `https://${config.distributionHost}`,
       );
 
+      // DEBUG: Log les paramètres CloudFront
+      console.log("☁️ DEBUG: CloudFront signing parameters", {
+        url: distributionUrl.toString(),
+        keyPairId: config.distributionKeyId?.substring(0, 20) + "...",
+        privateKeyLength: config.distributionKeyContents?.length || 0,
+        privateKeyStartsWith: config.distributionKeyContents?.substring(0, 50) + "...",
+        privateKeyEndsWith: config.distributionKeyContents?.substring(-50) + "...",
+        privateKeyContainsNewlines: config.distributionKeyContents?.includes('\n') || false,
+        dateLessThan: new Date(Date.now() + ONE_HOUR).toISOString()
+      });
+
       const url = getCloudfrontSignedUrl({
         url: distributionUrl.toString(),
         keyPairId: `${config.distributionKeyId}`,
