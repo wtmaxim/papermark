@@ -35,7 +35,25 @@ export default async function handler(
     });
     return res.status(500).json({ message: "Server configuration error" });
   }
+  
+  // DEBUG: Log les clés pour comparer
+  console.log("🔍 DEBUG: Comparing API keys", {
+    receivedToken: token?.substring(0, 20) + "...",
+    expectedToken: process.env.INTERNAL_API_KEY?.substring(0, 20) + "...",
+    tokensMatch: token === process.env.INTERNAL_API_KEY,
+    receivedLength: token?.length || 0,
+    expectedLength: process.env.INTERNAL_API_KEY?.length || 0
+  });
+  
   if (token !== process.env.INTERNAL_API_KEY) {
+    console.log("❌ API key mismatch", {
+      receivedToken: token?.substring(0, 20) + "...",
+      expectedToken: process.env.INTERNAL_API_KEY?.substring(0, 20) + "..."
+    });
+    log({
+      message: "API key mismatch - Unauthorized access attempt",
+      type: "error",
+    });
     return res.status(401).json({ message: "Unauthorized" });
   }
 
