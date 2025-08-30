@@ -82,32 +82,12 @@ export default async function handler(
       bucket: config?.bucket
     });
 
-    if (config.distributionHost) {
-      const distributionUrl = new URL(
-        key,
-        `https://${config.distributionHost}`,
-      );
-
-      // DEBUG: Log les paramètres CloudFront
-      console.log("☁️ DEBUG: CloudFront signing parameters", {
-        url: distributionUrl.toString(),
-        keyPairId: config.distributionKeyId?.substring(0, 20) + "...",
-        privateKeyLength: config.distributionKeyContents?.length || 0,
-        privateKeyStartsWith: config.distributionKeyContents?.substring(0, 50) + "...",
-        privateKeyEndsWith: config.distributionKeyContents?.substring(-50) + "...",
-        privateKeyContainsNewlines: config.distributionKeyContents?.includes('\n') || false,
-        dateLessThan: new Date(Date.now() + ONE_HOUR).toISOString()
-      });
-
-      const url = getCloudfrontSignedUrl({
-        url: distributionUrl.toString(),
-        keyPairId: `${config.distributionKeyId}`,
-        privateKey: `${config.distributionKeyContents}`,
-        dateLessThan: new Date(Date.now() + ONE_HOUR).toISOString(),
-      });
-
-      return res.status(200).json({ url });
-    }
+    // TEMPORAIREMENT : Utiliser S3 direct au lieu de CloudFront
+    // TODO: Configurer CloudFront plus tard
+    console.log("⚠️ DEBUG: Using S3 direct URLs (CloudFront not configured)");
+    
+    // Désactiver CloudFront temporairement
+    config.distributionHost = undefined;
 
     const getObjectCommand = new GetObjectCommand({
       Bucket: config.bucket,
