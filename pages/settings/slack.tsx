@@ -6,7 +6,7 @@ import { useTeam } from "@/context/team-context";
 import { CircleHelpIcon, Hash, Settings, XCircleIcon } from "lucide-react";
 import { toast } from "sonner";
 
-import { useFeatureFlags } from "@/lib/hooks/use-feature-flags";
+import { useAnalytics } from "@/lib/analytics";
 import {
   SlackChannelConfig,
   SlackIntegration,
@@ -38,10 +38,10 @@ export default function SlackSettings() {
   const router = useRouter();
   const teamInfo = useTeam();
   const teamId = teamInfo?.currentTeam?.id;
-  const { features, isLoading } = useFeatureFlags();
   const [connecting, setConnecting] = useState(false);
   const [isChannelPopoverOpen, setIsChannelPopoverOpen] = useState(false);
   const [pendingChannelUpdate, setPendingChannelUpdate] = useState(false);
+  const analytics = useAnalytics();
 
   // Use SWR hook for integration data
   const {
@@ -88,49 +88,55 @@ export default function SlackSettings() {
     [filteredChannels, ChannelIcon],
   );
 
-  // const handleIntegrationUpdate = (updatedIntegration: SlackIntegration) => {
-  //   mutateIntegration(updatedIntegration, false);
-  // };
-
-  // useEffect(() => {
-  //   let timeoutId: NodeJS.Timeout | null = null;
-
-  //   if (router.query.success) {
-  //     toast.success("Slack integration connected successfully!");
-  //     mutateIntegration();
-
-  //     if (router.query.warning) {
-  //       toast.warning(`Warning: ${router.query.warning}`);
-  //     }
-
-  //     timeoutId = setTimeout(() => {
-  //       router.replace("/settings/slack", undefined, { shallow: true });
-  //     }, 100);
-  //   } else if (router.query.error) {
-  //     toast.error(`Failed to connect Slack: ${router.query.error}`);
-  //     timeoutId = setTimeout(() => {
-  //       router.replace("/settings/slack", undefined, { shallow: true });
-  //     }, 100);
-  //   }
-
-  //   return () => {
-  //     if (timeoutId) clearTimeout(timeoutId);
-  //   };
-  // }, [router.query, mutateIntegration]);
-
-  // Redirect if Slack feature is not enabled
   useEffect(() => {
-    if (isLoading) return;
-    if (features && !features.slack) {
-      router.replace("/settings/general");
-      toast.error("This feature is not available for your team");
+    let timeoutId: NodeJS.Timeout | null = null;
+
+    if (router.query.success) {
+      toast.success("Slack integration connected successfully!");
+      mutateIntegration();
+
+      // Track successful connection on client side
+      analytics.capture("Slack Connected", {
+        source: "settings_page",
+        team_id: teamId,
+      });
+
+      if (router.query.warning) {
+        toast.warning(`Warning: ${router.query.warning}`);
+      }
+
+      timeoutId = setTimeout(() => {
+        router.replace("/settings/slack", undefined, { shallow: true });
+      }, 100);
+    } else if (router.query.error) {
+      toast.error(`Failed to connect Slack: ${router.query.error}`);
+
+      // Track failed connection on client side
+      analytics.capture("Slack Connection Failed", {
+        source: "settings_page",
+        team_id: teamId,
+        error: router.query.error,
+      });
+
+      timeoutId = setTimeout(() => {
+        router.replace("/settings/slack", undefined, { shallow: true });
+      }, 100);
     }
-  }, [features?.slack, isLoading, router]);
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [router.query, mutateIntegration, analytics, teamId]);
 
   const handleConnect = async () => {
     if (!teamId) return;
 
     setConnecting(true);
+    analytics.capture("Slack Connect Button Clicked", {
+      source: "settings_page",
+      team_id: teamId,
+    });
+
     try {
       const response = await fetch(
         `/api/integrations/slack/oauth/authorize?teamId=${teamId}`,
