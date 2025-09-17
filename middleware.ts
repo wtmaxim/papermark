@@ -29,7 +29,8 @@ function isCustomDomain(host: string) {
         host?.includes("papermark.io") ||
         host?.includes("papermark.com") ||
         host?.endsWith(".vercel.app") ||
-        host?.includes("papermark-c4u8.vercel.app")
+        host?.includes("papermark-c4u8.vercel.app") ||
+        host?.includes("paperky.com")
       ))
   );
 }
