@@ -61,7 +61,7 @@ export default function Login() {
             />
             <Link href="/">
               <span className="text-balance text-3xl font-semibold text-gray-900">
-                Welcome to Papermark
+                Welcome to Paperky
               </span>
             </Link>
             <h3 className="text-balance text-sm text-gray-800">

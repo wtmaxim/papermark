@@ -9,20 +9,20 @@ import { LogoCloud } from "@/components/shared/logo-cloud";
 import { Button } from "@/components/ui/button";
 
 const data = {
-  description: "Verify login to Papermark",
-  title: "Verify | Papermark",
+  description: "Verify login to Paperky",
+  title: "Verify | Paperky",
   url: "/verify",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.papermark.com"),
+  metadataBase: new URL("https://www.paperky.com"),
   title: data.title,
   description: data.description,
   openGraph: {
     title: data.title,
     description: data.description,
     url: data.url,
-    siteName: "Papermark",
+    siteName: "Paperky",
     images: [
       {
         url: "/_static/meta-image.png",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: data.title,
     description: data.description,
-    creator: "@papermarkio",
+    creator: "@paperkyio",
     images: ["/_static/meta-image.png"],
   },
 };
@@ -104,7 +104,7 @@ export default function VerifyPage({
           </div>
           <p className="mt-10 w-full max-w-md px-4 text-xs text-muted-foreground sm:px-12">
             By clicking continue, you acknowledge that you have read and agree
-            to Papermark&apos;s{" "}
+            to Paperky&apos;s{" "}
             <a
               href={`${process.env.NEXT_PUBLIC_MARKETING_URL}/terms`}
               target="_blank"
@@ -147,7 +147,7 @@ export default function VerifyPage({
               <div className="max-w-xl text-center">
                 <blockquote className="text-balance font-normal leading-8 text-white sm:text-xl sm:leading-9">
                   <p>
-                    &quot;We raised our €30M Fund with Papermark Data Rooms.
+                    &quot;We raised our €30M Fund with Paperky Data Rooms.
                     Love the customization, security and ease of use.&quot;
                   </p>
                 </blockquote>
