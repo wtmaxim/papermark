@@ -44,7 +44,7 @@ export default function PauseResumeReminderEmail({
                 src={`${baseUrl}/_static/papermark-logo.png`}
                 width="160"
                 height="48"
-                alt="Papermark"
+                alt="Paperky"
                 className="mx-auto my-0"
               />
             </Section>
@@ -59,7 +59,7 @@ export default function PauseResumeReminderEmail({
 
             <Text className="text-[14px] leading-[24px] text-black">
               This is a friendly reminder that your <strong>{teamName}</strong>{" "}
-              team's paused subscription will automatically resume billing in{" "}
+              team&apos;s paused subscription will automatically resume billing in{" "}
               <strong>3 days</strong>.
             </Text>
 
@@ -97,7 +97,7 @@ export default function PauseResumeReminderEmail({
             </Text>
 
             <Text className="text-[14px] leading-[24px] text-black">
-              If you'd like to cancel your subscription instead of resuming, or
+              If you&apos;d like to cancel your subscription instead of resuming, or
               need to update your billing information, you can manage your
               subscription in your account settings.
             </Text>
@@ -112,25 +112,25 @@ export default function PauseResumeReminderEmail({
             </Section>
 
             <Text className="text-[14px] leading-[24px] text-black">
-              If you have any questions or concerns, please don't hesitate to
+              If you have any questions or concerns, please don&apos;t hesitate to
               reach out to our support team.
             </Text>
 
             <Text className="text-[14px] leading-[24px] text-black">
               Best regards,
               <br />
-              The Papermark Team
+              The Paperky Team
             </Text>
 
             <Section className="mt-[32px] border-t border-solid border-[#eaeaea] pt-[20px]">
               <Text className="text-[12px] leading-[16px] text-[#666]">
                 This email was sent to you as an admin/manager of the {teamName}{" "}
-                team on Papermark. If you believe this was sent in error, please
+                team on Paperky. If you believe this was sent in error, please
                 contact our support team.
               </Text>
 
               <Text className="text-[12px] leading-[16px] text-[#666]">
-                Papermark - The secure document sharing platform
+                Paperky - The secure document sharing platform
               </Text>
             </Section>
           </Container>

@@ -56,7 +56,7 @@ export default function Login() {
           <div className="items-left flex flex-col space-y-3 px-4 py-6 pt-8 sm:px-12">
             <img
               src="/_static/papermark-logo.svg"
-              alt="Papermark Logo"
+              alt="Paperky Logo"
               className="md:mb-48s -mt-8 mb-36 h-7 w-auto self-start sm:mb-32"
             />
             <Link href="/">
@@ -204,7 +204,7 @@ export default function Login() {
           </div>
           <p className="mt-10 w-full max-w-md px-4 text-xs text-muted-foreground sm:px-12">
             By clicking continue, you acknowledge that you have read and agree
-            to Papermark&apos;s{" "}
+            to Paperky&apos;s{" "}
             <a
               href={`${process.env.NEXT_PUBLIC_MARKETING_URL}/terms`}
               target="_blank"
@@ -247,7 +247,7 @@ export default function Login() {
               <div className="max-w-xl text-center">
                 <blockquote className="text-balance font-normal leading-8 text-white sm:text-xl sm:leading-9">
                   <p>
-                    &quot;We raised our €30M Fund with Papermark Data Rooms.
+                    &quot;We raised our €30M Fund with Paperky Data Rooms.
                     Love the customization, security and ease of use.&quot;
                   </p>
                 </blockquote>

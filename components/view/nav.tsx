@@ -241,7 +241,7 @@ export default function Nav({
                   target="_blank"
                   className="text-2xl font-bold tracking-tighter text-white"
                 >
-                  Papermark
+                  Paperky
                 </Link>
               )}
             </div>

@@ -27,7 +27,7 @@ export default function ViewPage() {
                   <img className="object-contain" src={brandLogo} alt="Logo" />
                 ) : (
                   <div className="text-2xl font-bold tracking-tighter text-white">
-                    Papermark
+                    Paperky
                   </div>
                 )}
               </div>

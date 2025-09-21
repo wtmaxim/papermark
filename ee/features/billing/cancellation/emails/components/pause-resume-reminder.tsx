@@ -39,7 +39,7 @@ export default function PauseResumeReminderEmail({
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 w-[465px] p-5">
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
-              <span className="font-bold tracking-tighter">Papermark</span>
+              <span className="font-bold tracking-tighter">Paperky</span>
             </Text>
 
             <Text className="mx-0 mb-8 mt-4 p-0 text-center text-xl font-semibold">
@@ -47,7 +47,7 @@ export default function PauseResumeReminderEmail({
             </Text>
             <Text className="text-sm leading-6 text-black">
               This is a friendly reminder that your{" "}
-              <span className="font-semibold">{teamName}</span> team's paused
+              <span className="font-semibold">{teamName}</span> team&apos;s paused
               subscription will automatically resume billing in{" "}
               <span className="font-semibold">3 days</span>.
             </Text>
@@ -78,7 +78,7 @@ export default function PauseResumeReminderEmail({
               Need to make changes?
             </Text>
             <Text className="text-sm leading-6 text-black">
-              If you'd like to cancel your subscription or need to update your
+              If you&apos;d like to cancel your subscription or need to update your
               billing information, you can manage your subscription in your{" "}
               <span className="font-semibold">account settings</span>.
             </Text>
@@ -96,7 +96,7 @@ export default function PauseResumeReminderEmail({
             <Hr />
             <Section className="mt-8 text-gray-400">
               <Text className="text-xs">
-                © {new Date().getFullYear()} Papermark, Inc.
+                © {new Date().getFullYear()} Paperky, Inc.
               </Text>
               <Text className="text-xs">
                 If you have any feedback or questions about this email, simply

@@ -40,7 +40,7 @@ export default function Register() {
               src={PapermarkLogo}
               width={119}
               height={32}
-              alt="Papermark Logo"
+              alt="Paperky Logo"
             />
           </Link>
           <h3 className="text-2xl font-medium text-foreground">

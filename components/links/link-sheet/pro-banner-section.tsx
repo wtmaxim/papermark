@@ -36,7 +36,7 @@ export function ProBannerSection({
   return (
     <div className="pb-5">
       <LinkItem
-        title="Show Visitor Statistics & Papermark Branding"
+        title="Show Visitor Statistics & Paperky Branding"
         enabled={enabled}
         action={handleShowBanner}
         isAllowed={isAllowed}

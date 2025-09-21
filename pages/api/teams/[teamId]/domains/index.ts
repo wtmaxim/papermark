@@ -85,10 +85,10 @@ export default async function handle(
       }
 
       // Check if domain contains papermark
-      if (sanitizedDomain.toLowerCase().includes("papermark")) {
+      if (sanitizedDomain.toLowerCase().includes("paperky")) {
         return res
           .status(400)
-          .json({ message: "Domain cannot contain 'papermark'" });
+          .json({ message: "Domain cannot contain 'paperky'" });
       }
 
       // Check if domain already exists

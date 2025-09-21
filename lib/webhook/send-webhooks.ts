@@ -37,7 +37,7 @@ const publishWebhookEventToQStash = async ({
   webhook: Pick<Webhook, "pId" | "url" | "secret">;
   payload: WebhookPayload;
 }) => {
-  // TODO: add proper domain like app.papermark.dev in dev
+  // TODO: add proper domain like app.paperky.com in dev
   const callbackUrl = new URL(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/webhooks/callback`,
   );
@@ -51,7 +51,7 @@ const publishWebhookEventToQStash = async ({
     url: webhook.url,
     body: payload,
     headers: {
-      "X-Papermark-Signature": signature,
+      "X-Paperky-Signature": signature,
       "Upstash-Hide-Headers": "true",
     },
     callback: callbackUrl.href,
