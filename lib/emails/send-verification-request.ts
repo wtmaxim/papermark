@@ -20,7 +20,7 @@ export const sendVerificationRequestEmail = async (params: {
   try {
     await sendEmail({
       to: email as string,
-      subject: "Welcome to Papermark!",
+      subject: "Welcome to Paperky!",
       react: emailTemplate,
       test: process.env.NODE_ENV === "development",
     });
