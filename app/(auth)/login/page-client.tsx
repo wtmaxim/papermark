@@ -47,17 +47,17 @@ export default function Login() {
   return (
     <div className="flex h-screen w-full flex-wrap">
       {/* Left part */}
-      <div className="flex w-full justify-center bg-gray-50 md:w-1/2 lg:w-1/2">
+      <div className="flex w-full justify-center bg-gray-50 ">
         <div
           className="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
           aria-hidden="true"
         ></div>
         <div className="z-10 mx-5 mt-[calc(1vh)] h-fit w-full max-w-md overflow-hidden rounded-lg sm:mx-0 sm:mt-[calc(2vh)] md:mt-[calc(3vh)]">
-          <div className="items-left flex flex-col space-y-3 px-4 py-6 pt-8 sm:px-12">
+          <div className="items-center flex flex-col space-y-3 px-4 py-6 pt-8 sm:px-12">
             <img
               src="/_static/paperky-logo.svg"
               alt="Paperky Logo"
-              className="md:mb-48s -mt-8 mb-36 h-7 w-auto self-start sm:mb-32"
+              className="md:mb-48s -mt-8 mb-36 h-7 self-center sm:mb-32"
             />
             <Link href="/">
               <span className="text-balance text-3xl font-semibold text-gray-900">
@@ -224,18 +224,18 @@ export default function Login() {
           </p>
         </div>
       </div>
-      <div className="relative hidden w-full justify-center overflow-hidden bg-black md:flex md:w-1/2 lg:w-1/2">
+      {/*<div className="relative hidden w-full justify-center overflow-hidden bg-black md:flex md:w-1/2 lg:w-1/2">
         <div className="relative m-0 flex h-full min-h-[700px] w-full p-0">
           <div
             className="relative flex h-full w-full flex-col justify-between"
             id="features"
           >
-            {/* Testimonial top 2/3 */}
+            {/* Testimonial top 2/3 
             <div
               className="flex w-full flex-col items-center justify-center"
               style={{ height: "66.6666%" }}
             >
-              {/* Image container */}
+              {/* Image container 
               <div className="mb-4 h-64 w-80">
                 <img
                   className="h-full w-full rounded-2xl object-cover shadow-2xl"
@@ -243,7 +243,7 @@ export default function Login() {
                   alt="Backtrace Capital"
                 />
               </div>
-              {/* Text content */}
+              {/* Text content
               <div className="max-w-xl text-center">
                 <blockquote className="text-balance font-normal leading-8 text-white sm:text-xl sm:leading-9">
                   <p>
@@ -262,7 +262,7 @@ export default function Login() {
               </div>
             </div>
             {/* White block with logos bottom 1/3, full width/height */}
-            <div
+            {/*<div
               className="absolute bottom-0 left-0 flex w-full flex-col items-center justify-center bg-white"
               style={{ height: "33.3333%" }}
             >
@@ -275,11 +275,11 @@ export default function Login() {
                 alt="Trusted teams illustration"
                 className="mt-4 max-w-full h-auto object-contain"
                 style={{maxHeight: '120px'}}
-              /> */}
+              /> 
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 }
