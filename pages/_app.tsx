@@ -27,7 +27,7 @@ export default function App({
   return (
     <>
       <Head>
-        <title>Paperky | The Open Source DocSend Alternative</title>
+        <title>Paperky | The DocSend Alternative</title>
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
@@ -36,7 +36,7 @@ export default function App({
         />
         <meta
           property="og:title"
-          content="Paperky | The Open Source DocSend Alternative"
+          content="Paperky | The DocSend Alternative"
           key="og-title"
         />
         <meta

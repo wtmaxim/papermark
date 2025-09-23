@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 const data = {
   description:
-    "Paperky is an open-source document sharing infrastructure. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics.",
-  title: "Paperky | The Open Source DocSend Alternative",
+    "Paperky is an document sharing infrastructure. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics.",
+  title: "Paperky | The DocSend Alternative",
   url: "/",
 };
 
