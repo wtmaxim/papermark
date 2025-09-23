@@ -16,7 +16,7 @@ import {
 import { Footer } from "./shared/footer";
 
 export default function DomainDeleted({
-  domain = "papermark.com",
+  domain = "paperky.com",
 }: {
   domain: string;
 }) {

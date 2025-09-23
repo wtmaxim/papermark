@@ -84,7 +84,7 @@ export default async function handle(
         return res.status(422).json("Invalid domain");
       }
 
-      // Check if domain contains papermark
+      // Check if domain contains paperky
       if (sanitizedDomain.toLowerCase().includes("paperky")) {
         return res
           .status(400)

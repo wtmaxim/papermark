@@ -394,7 +394,7 @@ export const convertThreadMessagesToMessages = (
 export function constructMetadata({
   title = "Paperky | The DocSend Alternative",
   description = "Paperky is an document sharing alternative to DocSend with built-in engagement analytics and 100% white-labeling.",
-  image = "https://www.papermark.com/_static/meta-image.png",
+  image = "https://www.paperky.com/_static/meta-image.png",
   favicon = "/favicon.ico",
   noIndex = false,
 }: {
