@@ -7,6 +7,8 @@ import { mutate } from "swr";
 
 import { useAnalytics } from "@/lib/analytics";
 import { usePlan } from "@/lib/swr/use-billing";
+import { useTeamSettings } from "@/lib/swr/use-team-settings";
+import { validateContent } from "@/lib/utils/sanitize-html";
 
 import { UpgradePlanModal } from "@/components/billing/upgrade-plan-modal";
 import AppLayout from "@/components/layouts/app";
@@ -24,6 +26,9 @@ export default function General() {
   const [selectedPlan, setSelectedPlan] = useState<PlanEnum>(PlanEnum.Pro);
   const [planModalTrigger, setPlanModalTrigger] = useState<string>("");
   const [planModalOpen, setPlanModalOpen] = useState<boolean>(false);
+
+  // Fetch fresh team settings with proper revalidation
+  const { settings: teamSettings } = useTeamSettings(teamId);
 
   const showUpgradeModal = (plan: PlanEnum, trigger: string) => {
     setSelectedPlan(plan);
@@ -61,7 +66,11 @@ export default function General() {
         const { error } = await res.json();
         throw new Error(error.message);
       }
-      await Promise.all([mutate(`/api/teams/${teamId}`), mutate(`/api/teams`)]);
+      await Promise.all([
+        mutate(`/api/teams/${teamId}`),
+        mutate(`/api/teams`),
+        mutate(`/api/teams/${teamId}/settings`),
+      ]);
       return res.json();
     });
 
@@ -75,34 +84,84 @@ export default function General() {
     return promise;
   };
 
-  const handleTeamNameChange = async (updateData: any) => {
-    analytics.capture("Update Team Name", {
+  const handleReplicateFoldersChange = async (data: {
+    replicateDataroomFolders: string;
+  }) => {
+    analytics.capture("Toggle Replicate Dataroom Folders", {
       teamId,
-      name: updateData.name,
+      replicateDataroomFolders: data.replicateDataroomFolders === "true",
     });
 
-    const promise = fetch(`/api/teams/${teamId}/update-name`, {
+    const promise = fetch(`/api/teams/${teamId}/update-replicate-folders`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updateData),
+      body: JSON.stringify({
+        replicateDataroomFolders: data.replicateDataroomFolders === "true",
+      }),
     }).then(async (res) => {
       if (!res.ok) {
         const { error } = await res.json();
         throw new Error(error.message);
       }
-      await Promise.all([mutate(`/api/teams/${teamId}`), mutate(`/api/teams`)]);
+      await Promise.all([
+        mutate(`/api/teams/${teamId}`),
+        mutate(`/api/teams`),
+        mutate(`/api/teams/${teamId}/settings`),
+      ]);
       return res.json();
     });
 
     toast.promise(promise, {
-      loading: "Updating team name...",
-      success: "Successfully updated team name!",
-      error: (err) => err.message || "Failed to update team name",
+      loading: "Updating folder replication setting...",
+      success: "Successfully updated folder replication setting!",
+      error: (err) =>
+        err.message || "Failed to update folder replication setting",
     });
 
     return promise;
+  };
+
+  const handleTeamNameChange = async (updateData: any) => {
+    try {
+      // Sanitize and validate team name before sending
+      const sanitizedName = validateContent(updateData.name);
+
+      analytics.capture("Update Team Name", {
+        teamId,
+        name: sanitizedName,
+      });
+
+      const promise = fetch(`/api/teams/${teamId}/update-name`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name: sanitizedName }),
+      }).then(async (res) => {
+        if (!res.ok) {
+          const { error } = await res.json();
+          throw new Error(error.message);
+        }
+        await Promise.all([
+          mutate(`/api/teams/${teamId}`),
+          mutate(`/api/teams`),
+        ]);
+        return res.json();
+      });
+
+      toast.promise(promise, {
+        loading: "Updating team name...",
+        success: "Successfully updated team name!",
+        error: (err) => err.message || "Failed to update team name",
+      });
+
+      return promise;
+    } catch (error) {
+      toast.error((error as Error).message || "Failed to validate team name");
+      throw error;
+    }
   };
 
   return (
@@ -141,11 +200,26 @@ export default function General() {
               placeholder: "Enable advanced mode for Excel files",
             }}
             defaultValue={String(
-              teamInfo?.currentTeam?.enableExcelAdvancedMode ?? false,
+              teamSettings?.enableExcelAdvancedMode ?? false,
             )}
             helpText="When enabled, newly uploaded Excel files will be viewed using the Microsoft Office viewer for better formatting and compatibility."
             handleSubmit={handleExcelAdvancedModeChange}
             plan={(isFree && !isTrial) || isPro ? "Business" : undefined}
+          />
+
+          <Form
+            title="Replicate Dataroom Folders"
+            description="When uploading folders to a dataroom, also replicate the folder structure in 'All Documents'."
+            inputAttrs={{
+              name: "replicateDataroomFolders",
+              type: "checkbox",
+              placeholder: "Replicate folder structure in All Documents",
+            }}
+            defaultValue={String(
+              teamSettings?.replicateDataroomFolders ?? true,
+            )}
+            helpText="When enabled, folders uploaded to datarooms will be created in 'All Documents' with the same structure. When disabled, all documents will be placed in a single folder named after the dataroom in 'All Documents'."
+            handleSubmit={handleReplicateFoldersChange}
           />
           <IgnoredDomainsForm />
           <GlobalBlockListForm />

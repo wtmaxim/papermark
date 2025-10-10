@@ -1,13 +1,14 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-
-
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 import { useTeams } from "@/lib/swr/use-teams";
 import { Team } from "@/lib/types";
-
-
-
-
 
 interface TeamContextProps {
   children: React.ReactNode;
@@ -35,6 +36,7 @@ export const TeamProvider = ({ children }: TeamContextProps): JSX.Element => {
   const { teams, loading } = useTeams();
   const [currentTeam, setCurrentTeamState] = useState<Team | null>(null);
 
+  // Effect to set initial currentTeam on mount
   useEffect(() => {
     if (!teams || teams.length === 0 || currentTeam) return;
 
