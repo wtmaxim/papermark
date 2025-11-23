@@ -246,6 +246,7 @@ export default function DocumentView({
         setCode={setCode}
         isInvalidCode={isInvalidCode}
         setIsInvalidCode={setIsInvalidCode}
+        brand={brand}
       />
     );
   }
@@ -271,6 +272,7 @@ export default function DocumentView({
         useCustomAccessForm={useCustomAccessForm}
         customFields={link.customFields}
         logoOnAccessForm={logoOnAccessForm}
+        linkWelcomeMessage={link.welcomeMessage}
       />
     );
   }

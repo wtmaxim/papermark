@@ -29,7 +29,7 @@ export const sendUpgradePersonalEmail = async (
     await sendEmail({
       to: email as string,
       from: "Iuliia Shnai <iuliia@paperky.com>",
-      subject: `Your Paperky account is ready`,
+      subject: "Your Paperky account is ready",
       react: emailTemplate,
       test: process.env.NODE_ENV === "development",
       scheduledAt: sixMinuteFromNow,

@@ -1,6 +1,6 @@
-import WelcomeEmail from "@/components/emails/welcome";
-
 import { sendEmail } from "@/lib/resend";
+
+import WelcomeEmail from "@/components/emails/welcome";
 
 import { CreateUserEmailProps } from "../types";
 
@@ -10,6 +10,7 @@ export const sendWelcomeEmail = async (params: CreateUserEmailProps) => {
   try {
     await sendEmail({
       to: email as string,
+      from: "Marc from Paperky <marc@paperky.com>",
       subject: "Welcome to Paperky!",
       react: emailTemplate,
       test: process.env.NODE_ENV === "development",

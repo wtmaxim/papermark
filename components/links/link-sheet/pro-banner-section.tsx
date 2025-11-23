@@ -36,7 +36,9 @@ export function ProBannerSection({
   return (
     <div className="pb-5">
       <LinkItem
-        title="Show Visitor Statistics & Paperky Branding"
+        title="Show Secured by Paperky"
+        tooltipContent="Display 'Secured by Paperky' branding on your shared documents"
+        link="https://www.paperky.com/help/article/remove-paperky-branding"
         enabled={enabled}
         action={handleShowBanner}
         isAllowed={isAllowed}

@@ -162,21 +162,20 @@ export function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export const timeAgo = (timestamp?: Date): string => {
+export const timeAgo = (timestamp?: Date | string | number): string => {
   if (!timestamp) return "Just now";
-  const diff = Date.now() - new Date(timestamp).getTime();
+  const date = new Date(timestamp);
+  const diff = Date.now() - date.getTime();
   if (diff < 60000) {
     // less than 1 second
     return "Just now";
   } else if (diff > 82800000) {
     // more than 23 hours – similar to how Twitter displays timestamps
-    return new Date(timestamp).toLocaleDateString("en-US", {
+    return date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year:
-        new Date(timestamp).getFullYear() !== new Date().getFullYear()
-          ? "numeric"
-          : undefined,
+        date.getFullYear() !== new Date().getFullYear() ? "numeric" : undefined,
     });
   }
   return `${ms(diff)} ago`;
@@ -327,8 +326,8 @@ export const daysLeft = (
 
   const diffInMilliseconds = endPeriodDate.getTime() - now.getTime();
 
-  // Convert milliseconds to days and return
-  return Math.ceil(diffInMilliseconds / (1000 * 60 * 60 * 24));
+  // Convert milliseconds to days and round down to show complete days remaining
+  return Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24));
 };
 
 const cutoffDate = new Date("2023-10-17T00:00:00.000Z");

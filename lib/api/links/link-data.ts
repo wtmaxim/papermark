@@ -109,8 +109,10 @@ export async function fetchDataroomLinkData({
         select: {
           id: true,
           name: true,
+          description: true,
           teamId: true,
           allowBulkDownload: true,
+          showLastUpdated: true,
           createdAt: true,
           documents: {
             where:
@@ -213,17 +215,19 @@ export async function fetchDataroomLinkData({
     },
     select: {
       logo: true,
+      banner: true,
       brandColor: true,
       accentColor: true,
+      welcomeMessage: true,
     },
   });
 
   const brand = {
     logo: dataroomBrand?.logo || teamBrand?.logo,
-    banner: dataroomBrand?.banner || null,
+    banner: dataroomBrand?.banner || teamBrand?.banner || null,
     brandColor: dataroomBrand?.brandColor || teamBrand?.brandColor,
     accentColor: dataroomBrand?.accentColor || teamBrand?.accentColor,
-    welcomeMessage: dataroomBrand?.welcomeMessage,
+    welcomeMessage: dataroomBrand?.welcomeMessage || teamBrand?.welcomeMessage,
   };
 
   // Extract access controls from either ViewerGroup or PermissionGroup
@@ -288,13 +292,15 @@ export async function fetchDataroomDocumentLinkData({
   }
 
   const linkData = await prisma.link.findUnique({
-    where: { id: linkId, teamId, linkType: "DATAROOM_LINK" },
+    where: { id: linkId, teamId, linkType: "DATAROOM_LINK", deletedAt: null },
     select: {
       dataroom: {
         select: {
           id: true,
           name: true,
+          description: true,
           allowBulkDownload: true,
+          showLastUpdated: true,
           documents: {
             where: { id: dataroomDocumentId },
             select: {
@@ -357,7 +363,7 @@ export async function fetchDocumentLinkData({
   teamId: string;
 }) {
   const linkData = await prisma.link.findUnique({
-    where: { id: linkId, teamId },
+    where: { id: linkId, teamId, deletedAt: null },
     select: {
       document: {
         select: {
