@@ -301,7 +301,7 @@ export default function LinksTable({
           text="Export"
           clickedPlan={PlanEnum.Pro}
           trigger="dashboard_links_export"
-          variant="outline"
+          variant="outline-solid"
           size="sm"
         />
       );

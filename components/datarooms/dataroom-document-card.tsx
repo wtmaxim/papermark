@@ -269,7 +269,7 @@ export default function DataroomDocumentCard({
                 type: dataroomDocument.document.type,
                 numPages: null, // Not available in this context
               }}
-              variant="outline"
+              variant="outline-solid"
               size="icon"
               className="z-10 h-8 w-8 border-gray-200 bg-transparent hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
             />

@@ -347,7 +347,7 @@ export default function ViewsTable({
           text="Export"
           clickedPlan={PlanEnum.Pro}
           trigger="dashboard_views_export"
-          variant="outline"
+          variant="outline-solid"
           size="sm"
         />
       );

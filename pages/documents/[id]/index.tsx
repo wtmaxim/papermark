@@ -172,7 +172,7 @@ export default function DocumentPage() {
               key={"preview"}
               documentId={prismaDocument.id}
               primaryVersion={primaryVersion}
-              variant="outline"
+              variant="outline-solid"
               size="default"
               showTooltip={false}
               className="h-8 whitespace-nowrap text-xs lg:h-9 lg:text-sm"

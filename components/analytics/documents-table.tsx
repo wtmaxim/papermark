@@ -237,7 +237,7 @@ export default function DocumentsTable({
           text="Export"
           clickedPlan={PlanEnum.Pro}
           trigger="dashboard_documents_export"
-          variant="outline"
+          variant="outline-solid"
           size="sm"
         />
       );
