@@ -107,9 +107,9 @@ export function AddToDataroomModal({
                 key={dataroom.id}
                 value={dataroom.id}
                 disabled={dataroom.id === dataroomId}
-                className="break-words"
+                className="wrap-break-word"
               >
-                <span className="line-clamp-1 break-words">
+                <span className="line-clamp-1 wrap-break-word">
                   {dataroom.name}
                   {dataroom.id === dataroomId ? " (current)" : ""}
                 </span>

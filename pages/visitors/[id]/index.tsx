@@ -115,7 +115,7 @@ const VisitorDetailHeaderSkeleton = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <div className="mt-2 flex items-center gap-x-2">
-        <Skeleton className="hidden h-10 w-10 flex-shrink-0 rounded-full sm:inline-flex" />
+        <Skeleton className="hidden h-10 w-10 shrink-0 rounded-full sm:inline-flex" />
         <Skeleton className="h-8 w-48 rounded-md sm:w-64" />
       </div>
     </section>

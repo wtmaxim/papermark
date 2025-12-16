@@ -356,7 +356,7 @@ export function InviteViewersModal({
 
           {/* Right Column - Email Preview */}
           <div className="hidden flex-col overflow-y-auto rounded-md border bg-muted/40 md:flex">
-            <div className="sticky top-0 border-b bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div className="sticky top-0 border-b bg-background/95 p-4 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
               <p className="font-medium text-foreground">Email preview</p>
             </div>
 

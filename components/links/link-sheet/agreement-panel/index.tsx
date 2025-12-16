@@ -282,11 +282,11 @@ export default function AgreementSheet({
 
         <ScrollArea className="flex-1">
           <form className="flex grow flex-col" onSubmit={handleSubmit}>
-            <div className="flex-grow space-y-6">
+            <div className="grow space-y-6">
               <div className="w-full space-y-2">
                 <Label htmlFor="name">Display name</Label>
                 <Input
-                  className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
+                  className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
                   id="name"
                   type="text"
                   name="name"
@@ -342,7 +342,7 @@ export default function AgreementSheet({
                   <div className="w-full space-y-2">
                     <Label htmlFor="link">Link to an agreement</Label>
                     <Input
-                      className={`flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset placeholder:text-muted-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 ${
+                      className={`flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset placeholder:text-muted-foreground focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 ${
                         !isUrlValid
                           ? "ring-red-500 focus:ring-red-500"
                           : "ring-input focus:ring-gray-400"
@@ -393,7 +393,7 @@ export default function AgreementSheet({
                   <div className="w-full space-y-2">
                     <Label htmlFor="textContent">Agreement Text</Label>
                     <Textarea
-                      className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
+                      className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
                       id="textContent"
                       name="textContent"
                       required={data.contentType === "TEXT"}
@@ -422,7 +422,7 @@ export default function AgreementSheet({
               </div>
             </div>
             <SheetFooter
-              className={`flex-shrink-0 ${isOnlyView ? "mt-6" : ""}`}
+              className={`shrink-0 ${isOnlyView ? "mt-6" : ""}`}
             >
               <div className="flex items-center">
                 {isOnlyView ? (

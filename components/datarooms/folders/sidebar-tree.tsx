@@ -180,7 +180,7 @@ export const SidebarLink = memo(
         className={cn(
           "flex list-none",
           "rounded-md text-foreground transition-all duration-200 ease-in-out",
-          "hover:bg-gray-100 hover:shadow-sm hover:dark:bg-muted",
+          "hover:bg-gray-100 hover:shadow-xs dark:hover:bg-muted",
           "px-3 py-1.5 leading-6",
           isActive && "bg-gray-100 font-semibold dark:bg-muted",
         )}

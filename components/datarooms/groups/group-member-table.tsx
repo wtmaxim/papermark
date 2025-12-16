@@ -248,7 +248,7 @@ export default function GroupMemberTable({
                           <div className="flex items-center overflow-visible sm:space-x-3">
                             <VisitorAvatar viewerEmail={"@"} />
                             <div className="min-w-0 flex-1">
-                              <div className="focus:outline-none">
+                              <div className="focus:outline-hidden">
                                 <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                                   {domain}
                                 </p>
@@ -262,7 +262,7 @@ export default function GroupMemberTable({
                             <DropdownMenuTrigger asChild>
                               <Button
                                 variant="ghost"
-                                className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
+                                className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
                               >
                                 <span className="sr-only">Open menu</span>
                                 <MoreHorizontalIcon className="h-4 w-4" />
@@ -295,7 +295,7 @@ export default function GroupMemberTable({
                                 viewerEmail={viewer.viewer.email}
                               />
                               <div className="min-w-0 flex-1">
-                                <div className="focus:outline-none">
+                                <div className="focus:outline-hidden">
                                   <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                                     {viewer.viewer.email}
                                     {latestInvitation && (
@@ -328,7 +328,7 @@ export default function GroupMemberTable({
                               <DropdownMenuTrigger asChild>
                                 <Button
                                   variant="ghost"
-                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
+                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
                                 >
                                   <span className="sr-only">Open menu</span>
                                   <MoreHorizontalIcon className="h-4 w-4" />

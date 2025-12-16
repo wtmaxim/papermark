@@ -22,7 +22,7 @@ export default function PasswordSection({
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (
-    <div className="space-y-2 rounded-md shadow-sm">
+    <div className="space-y-2 rounded-md shadow-xs">
       <label
         htmlFor="password"
         className="block text-sm font-medium leading-6 text-white"
@@ -40,7 +40,7 @@ export default function PasswordSection({
           autoCorrect="off"
           autoComplete="off"
           translate="no"
-          className="notranslate flex w-full rounded-md border-0 bg-black py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300 sm:text-sm sm:leading-6"
+          className="notranslate flex w-full rounded-md border-0 bg-black py-1.5 text-white shadow-xs ring-1 ring-inset ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300 sm:text-sm sm:leading-6"
           style={{
             backgroundColor:
               brand && brand.accentColor ? brand.accentColor : "black",

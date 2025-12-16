@@ -75,7 +75,7 @@ export function TeamSwitcher({
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+            className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
             align="start"
             side={isMobile ? "bottom" : "right"}
             sideOffset={4}
@@ -148,7 +148,7 @@ export function TeamSwitcher({
               size="lg"
               className="size-12 justify-center border data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground group-data-[collapsible=icon]:hidden"
             >
-              <UserRoundPlusIcon className="!size-5" strokeWidth={1.5} />
+              <UserRoundPlusIcon className="size-5!" strokeWidth={1.5} />
             </SidebarMenuButton>
           </UpgradePlanModal>
         ) : canAddUsers ? (
@@ -160,7 +160,7 @@ export function TeamSwitcher({
               size="lg"
               className="size-12 justify-center border data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground group-data-[collapsible=icon]:hidden"
             >
-              <UserRoundPlusIcon className="!size-5" strokeWidth={1.5} />
+              <UserRoundPlusIcon className="size-5!" strokeWidth={1.5} />
             </SidebarMenuButton>
           </AddTeamMembers>
         ) : (
@@ -169,7 +169,7 @@ export function TeamSwitcher({
               size="lg"
               className="size-12 justify-center border data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground group-data-[collapsible=icon]:hidden"
             >
-              <UserRoundPlusIcon className="!size-5" strokeWidth={1.5} />
+              <UserRoundPlusIcon className="size-5!" strokeWidth={1.5} />
             </SidebarMenuButton>
           </AddSeatModal>
         )}

@@ -53,7 +53,7 @@ function FolderSelectionModal({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <div className="flex">
-          <div className="flex w-full cursor-pointer rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm">
+          <div className="flex w-full cursor-pointer rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm">
             <div className="flex w-full items-center px-3 py-2">
               {selectedFolder ? (
                 <div className="relative w-full">

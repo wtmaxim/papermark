@@ -560,7 +560,7 @@ export default function ConversationDetailPage() {
                           {/* {conversation.messages.length > 1 && (
                         <div className="mb-2 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm">
                           <div className="flex items-start gap-2">
-                            <BookOpenCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
+                            <BookOpenCheck className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
                             <div className="text-blue-800">
                               {!selectedQuestionId && !selectedAnswerId ? (
                                 <p>

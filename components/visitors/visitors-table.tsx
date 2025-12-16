@@ -172,7 +172,7 @@ export default function VisitorsTable({
                                 isArchived
                               />
                               <div className="min-w-0 flex-1">
-                                <div className="focus:outline-none">
+                                <div className="focus:outline-hidden">
                                   <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                                     {view.viewerEmail ? (
                                       <>
@@ -234,7 +234,7 @@ export default function VisitorsTable({
                           <DropdownMenuTrigger asChild>
                             <Button
                               variant="ghost"
-                              className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
+                              className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
                               onClick={(e) => {
                                 e.stopPropagation();
                                 e.preventDefault();
@@ -280,7 +280,7 @@ export default function VisitorsTable({
                             <div className="flex items-center overflow-visible sm:space-x-3">
                               <VisitorAvatar viewerEmail={view.viewerEmail} />
                               <div className="min-w-0 flex-1">
-                                <div className="focus:outline-none">
+                                <div className="focus:outline-hidden">
                                   <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                                     {view.viewerEmail ? (
                                       <>
@@ -395,7 +395,7 @@ export default function VisitorsTable({
                               <DropdownMenuTrigger asChild>
                                 <Button
                                   variant="ghost"
-                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
+                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     e.preventDefault();
@@ -557,12 +557,12 @@ export default function VisitorsTable({
 // create a component for a blurred view of the visitor
 const VisitorBlurred = () => {
   return (
-    <TableRow className="blur-sm">
+    <TableRow className="blur-xs">
       <TableCell className="">
         <div className="flex items-center overflow-visible sm:space-x-3">
           <VisitorAvatar viewerEmail={"abc@example.org"} />
           <div className="min-w-0 flex-1">
-            <div className="focus:outline-none">
+            <div className="focus:outline-hidden">
               <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                 Anonymous
               </p>

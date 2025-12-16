@@ -97,7 +97,7 @@ export default function Preview({
                 {title || title === "" ? (
                   <input
                     maxLength={120}
-                    className="w-full truncate border-none bg-transparent p-0 font-semibold text-[#000000E6] outline-none focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
+                    className="w-full truncate border-none bg-transparent p-0 font-semibold text-[#000000E6] outline-hidden focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
                     value={title}
                     onChange={(e) => {
                       setData((prev) => ({
@@ -155,7 +155,7 @@ export default function Preview({
                   <input
                     maxLength={120}
                     name={window.crypto.randomUUID()}
-                    className="w-full truncate border-none bg-transparent p-0 font-semibold text-[#000000E6] outline-none focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
+                    className="w-full truncate border-none bg-transparent p-0 font-semibold text-[#000000E6] outline-hidden focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
                     value={title}
                     onChange={(e) => {
                       setData((prev) => ({
@@ -171,7 +171,7 @@ export default function Preview({
               {description || description === "" ? (
                 <ReactTextareaAutosize
                   maxLength={240}
-                  className="line-clamp-2 w-full resize-none rounded-md border-none bg-gray-200 bg-transparent p-0 text-sm text-[#606770] outline-none focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
+                  className="line-clamp-2 w-full resize-none rounded-md border-none bg-gray-200 bg-transparent p-0 text-sm text-[#606770] outline-hidden focus:rounded-md focus:px-1 focus:ring-1 focus:ring-inset focus:ring-gray-500"
                   value={description}
                   maxRows={2}
                   onChange={(e) => {
@@ -202,12 +202,12 @@ const ImagePreview = ({ image }: { image: string | null | undefined }) => {
         <img
           src={image}
           alt="Preview"
-          className="aspect-[1200/630] h-full w-full object-cover"
+          className="aspect-1200/630 h-full w-full object-cover"
         />
       );
     } else {
       return (
-        <div className="flex aspect-[1200/630] h-full w-full flex-col items-center justify-center space-y-4 bg-gray-100">
+        <div className="flex aspect-1200/630 h-full w-full flex-col items-center justify-center space-y-4 bg-gray-100">
           <ImageIcon className="h-8 w-8 text-gray-400" />
           <p className="text-sm text-gray-400">
             Add an image to generate a preview.

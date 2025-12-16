@@ -74,10 +74,10 @@ export default function QuestionSection({
             <div className="w-full space-y-2">
               <Label>Question Type</Label>
               <Select defaultValue="yes-no">
-                <SelectTrigger className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm">
+                <SelectTrigger className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm">
                   <SelectValue placeholder="Select a question type" />
                 </SelectTrigger>
-                <SelectContent className="z-50 flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-gray-900 sm:text-sm">
+                <SelectContent className="z-50 flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-gray-900 sm:text-sm">
                   <SelectItem value="yes-no">Yes / No</SelectItem>
                 </SelectContent>
               </Select>

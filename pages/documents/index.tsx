@@ -75,7 +75,7 @@ export default function Documents() {
               <Button
                 size="icon"
                 variant="outline"
-                className="border-gray-500 bg-gray-50 hover:bg-gray-200 dark:bg-black hover:dark:bg-muted"
+                className="border-gray-500 bg-gray-50 hover:bg-gray-200 dark:bg-black dark:hover:bg-muted"
               >
                 <FolderPlusIcon
                   className="h-5 w-5 shrink-0"

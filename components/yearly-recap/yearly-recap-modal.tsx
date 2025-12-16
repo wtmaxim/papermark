@@ -413,7 +413,7 @@ My Papermark Wrapped ${stats?.year}!
                   className="mx-auto w-full max-w-[500px] overflow-hidden rounded-2xl bg-gray-100 p-4 sm:p-8"
                 >
                   {/* Stats Grid */}
-                  <div className="mb-4 rounded-xl bg-white p-4 shadow-sm sm:mb-6 sm:p-6">
+                  <div className="mb-4 rounded-xl bg-white p-4 shadow-xs sm:mb-6 sm:p-6">
                     <div className="grid grid-cols-2 gap-3 sm:gap-4">
                       <div className="text-center">
                         <div className="mb-1 text-2xl font-bold text-black sm:text-4xl">
@@ -519,7 +519,7 @@ My Papermark Wrapped ${stats?.year}!
 
             <Button
               onClick={() => setShowShareView(false)}
-              className="w-full gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-500 text-white hover:from-orange-600 hover:to-orange-600 sm:w-auto"
+              className="w-full gap-2 rounded-full bg-linear-to-r from-orange-500 to-orange-500 text-white hover:from-orange-600 hover:to-orange-600 sm:w-auto"
             >
               Back to Wrapped
               <ArrowRight className="h-4 w-4" />
@@ -705,9 +705,9 @@ function MinutesSlide({ stats }: { stats: YearlyRecapStats }) {
 
       {/* Document card from left */}
       {stats.mostViewedDocument && (
-        <div className="mt-6 w-full max-w-xl rounded-xl border border-foreground/5 bg-white/80 p-4 shadow-sm backdrop-blur duration-700 animate-in slide-in-from-left-8 sm:mt-8 sm:p-5">
+        <div className="mt-6 w-full max-w-xl rounded-xl border border-foreground/5 bg-white/80 p-4 shadow-xs backdrop-blur-sm duration-700 animate-in slide-in-from-left-8 sm:mt-8 sm:p-5">
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-orange-500/10 sm:h-12 sm:w-12">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-500/10 sm:h-12 sm:w-12">
               <FileText className="h-5 w-5 text-orange-500 sm:h-6 sm:w-6" />
             </div>
             <div className="min-w-0 text-left">
@@ -786,7 +786,7 @@ function MostActiveSlide({ stats }: { stats: YearlyRecapStats }) {
       {/* Card appears from bottom only */}
       {stats.mostActiveViewer ? (
         <div className="w-full max-w-xl rounded-2xl bg-card p-6 shadow-lg duration-700 animate-in slide-in-from-bottom-8 sm:rounded-3xl sm:p-12">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/40 sm:mb-6 sm:h-24 sm:w-24">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br from-primary/20 to-primary/40 sm:mb-6 sm:h-24 sm:w-24">
             <Users className="h-8 w-8 text-primary sm:h-12 sm:w-12" />
           </div>
           <h3 className="truncate text-balance text-lg font-bold text-foreground sm:text-2xl">

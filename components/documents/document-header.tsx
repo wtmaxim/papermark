@@ -600,7 +600,7 @@ export default function DocumentHeader({
             prismaDocument.type !== "video" &&
             prismaDocument.assistantEnabled && (
               <Button
-                className="group hidden h-8 space-x-1 whitespace-nowrap bg-gradient-to-r from-[#16222A] via-emerald-500 to-[#16222A] text-xs duration-200 ease-linear hover:bg-right md:flex lg:h-9 lg:text-sm"
+                className="group hidden h-8 space-x-1 whitespace-nowrap bg-linear-to-r from-[#16222A] via-emerald-500 to-[#16222A] text-xs duration-200 ease-linear hover:bg-right md:flex lg:h-9 lg:text-sm"
                 variant={"special"}
                 size={"icon"}
                 style={{ backgroundSize: "200% auto" }}

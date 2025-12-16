@@ -112,7 +112,7 @@ function DeleteTeamModal({
             </span>{" "}
             to continue:
           </label>
-          <div className="relative mt-1 rounded-md shadow-sm">
+          <div className="relative mt-1 rounded-md shadow-xs">
             <Input
               type="text"
               name="team-name"
@@ -121,7 +121,7 @@ function DeleteTeamModal({
               autoComplete="off"
               required
               pattern={teamInfo?.currentTeam?.name}
-              className="bg-white dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent"
+              className="bg-white dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent"
             />
           </div>
         </div>
@@ -137,7 +137,7 @@ function DeleteTeamModal({
             </span>{" "}
             below
           </label>
-          <div className="relative mt-1 rounded-md shadow-sm">
+          <div className="relative mt-1 rounded-md shadow-xs">
             <Input
               type="text"
               name="verification"
@@ -145,7 +145,7 @@ function DeleteTeamModal({
               pattern="confirm delete team"
               required
               autoComplete="off"
-              className="bg-white dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent"
+              className="bg-white dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent"
               onInput={handleInputChange}
             />
           </div>

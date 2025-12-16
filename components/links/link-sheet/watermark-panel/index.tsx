@@ -144,7 +144,7 @@ export default function WatermarkConfigSheet({
                         isTiled: checked === true,
                       }));
                     }}
-                    className="mt-0.5 border border-gray-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-300 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-white data-[state=checked]:bg-black data-[state=checked]:text-white"
+                    className="mt-0.5 border border-gray-400 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-gray-300 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-white data-[state=checked]:bg-black data-[state=checked]:text-white"
                   />
                   <Label htmlFor="watermark-tiled">Tiled</Label>
                 </div>
@@ -220,7 +220,7 @@ export default function WatermarkConfigSheet({
                   <Popover>
                     <PopoverTrigger>
                       <div
-                        className="h-9 w-9 cursor-pointer rounded-md shadow-sm ring-1 ring-muted-foreground hover:ring-1 hover:ring-gray-300 focus:ring-inset"
+                        className="h-9 w-9 cursor-pointer rounded-md shadow-xs ring-1 ring-muted-foreground hover:ring-1 hover:ring-gray-300 focus:ring-inset"
                         style={{ backgroundColor: formValues.color }}
                       />
                     </PopoverTrigger>
@@ -237,7 +237,7 @@ export default function WatermarkConfigSheet({
                     </PopoverContent>
                   </Popover>
                   <HexColorInput
-                    className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm"
+                    className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm"
                     color={formValues.color || ""}
                     onChange={(value) => {
                       setFormValues({
@@ -307,7 +307,7 @@ export default function WatermarkConfigSheet({
           </motion.div>
         </ScrollArea>
 
-        <SheetFooter className="flex-shrink-0">
+        <SheetFooter className="shrink-0">
           <Button onClick={validateAndSave}>Save Watermark</Button>
         </SheetFooter>
       </SheetContent>

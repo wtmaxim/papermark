@@ -15,7 +15,7 @@ interface DocumentPreviewButtonProps {
     numPages?: number | null;
   };
   isProcessing?: boolean;
-  variant?: "ghost" | "outline" | "default";
+  variant?: "ghost" | "outline-solid" | "default";
   size?: "sm" | "default" | "lg" | "icon";
   children?: React.ReactNode;
   className?: string;

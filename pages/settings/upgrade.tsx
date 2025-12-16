@@ -206,7 +206,7 @@ export default function UpgradePage() {
                     : planOption === PlanEnum.DataRoomsPlus
                       ? "border-gray-800 dark:border-gray-300"
                       : "border-gray-400"
-              } bg-white p-6 shadow-sm dark:bg-gray-900`}
+              } bg-white p-6 shadow-xs dark:bg-gray-900`}
             >
               <div className="mb-4 border-b border-gray-200 pb-2">
                 <h3 className="text-balance text-xl font-medium text-foreground text-gray-900 dark:text-white">
@@ -362,7 +362,7 @@ export default function UpgradePage() {
                       : planOption === PlanEnum.DataRoomsPlus
                         ? "border-gray-800 dark:border-gray-300"
                         : "border-gray-400"
-                } bg-white p-6 shadow-sm dark:bg-gray-900`}
+                } bg-white p-6 shadow-xs dark:bg-gray-900`}
               >
                 <div className="mb-4 border-b border-gray-200 pb-2">
                   <h3 className="text-balance text-xl font-medium text-foreground text-gray-900 dark:text-white">
@@ -519,7 +519,7 @@ export default function UpgradePage() {
                         : planOption === PlanEnum.DataRoomsPlus
                           ? "border-gray-800 dark:border-gray-300"
                           : "border-gray-400"
-                  } bg-white p-6 shadow-sm dark:bg-gray-900`}
+                  } bg-white p-6 shadow-xs dark:bg-gray-900`}
                 >
                   <div className="mb-4 border-b border-gray-200 pb-2">
                     <h3 className="text-balance text-xl font-medium text-foreground text-gray-900 dark:text-white">

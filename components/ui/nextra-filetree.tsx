@@ -52,7 +52,7 @@ interface FileProps {
 
 function Tree({ children }: { children: ReactNode }): ReactElement {
   return (
-    <div className={cn("nextra-filetree !mt-0 w-full select-none text-sm")}>
+    <div className={cn("nextra-filetree mt-0! w-full select-none text-sm")}>
       <div className="block space-y-1 rounded-lg">{children}</div>
     </div>
   );
@@ -121,7 +121,7 @@ const Folder = memo<FolderProps>(
           title={name}
           className={cn(
             "inline-flex w-full cursor-pointer items-center overflow-hidden",
-            "rounded-md text-foreground duration-100 hover:bg-gray-100 hover:dark:bg-muted",
+            "rounded-md text-foreground duration-100 hover:bg-gray-100 dark:hover:bg-muted",
             "px-3 py-1.5 leading-6",
             active && "bg-gray-100 font-semibold dark:bg-muted",
             disable && "pointer-events-none cursor-auto opacity-50",
@@ -177,7 +177,7 @@ const File = memo<FileProps>(({ label, name, active, onToggle }) => {
     <li
       className={cn(
         "flex list-none",
-        "rounded-md text-foreground duration-100 hover:bg-gray-100 hover:dark:bg-muted",
+        "rounded-md text-foreground duration-100 hover:bg-gray-100 dark:hover:bg-muted",
         "px-3 py-1.5 leading-6",
         active && "bg-gray-100 font-semibold dark:bg-muted",
       )}

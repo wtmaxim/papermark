@@ -184,7 +184,7 @@ export default function GenerateIndexDialog({
             <h4 className="text-sm font-medium">Select Format</h4>
             <div className="grid grid-cols-2 gap-2">
               <Button
-                variant={selectedFormat === "excel" ? "default" : "outline"}
+                variant={selectedFormat === "excel" ? "default" : "outline-solid"}
                 onClick={() => {
                   setSelectedFormat("excel");
                 }}
@@ -195,7 +195,7 @@ export default function GenerateIndexDialog({
                 Excel
               </Button>
               <Button
-                variant={selectedFormat === "csv" ? "default" : "outline"}
+                variant={selectedFormat === "csv" ? "default" : "outline-solid"}
                 onClick={() => setSelectedFormat("csv")}
                 className="justify-start"
                 size="sm"
@@ -204,7 +204,7 @@ export default function GenerateIndexDialog({
                 CSV
               </Button>
               <Button
-                variant={selectedFormat === "json" ? "default" : "outline"}
+                variant={selectedFormat === "json" ? "default" : "outline-solid"}
                 onClick={() => setSelectedFormat("json")}
                 className="justify-start"
                 size="sm"

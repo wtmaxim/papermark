@@ -351,7 +351,7 @@ export default function PagesHorizontalViewer({
 
     return () => {
       window.removeEventListener("focus", handleFocus);
-      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("blur-sm", handleBlur);
     };
   }, [screenshotProtectionEnabled]);
 
@@ -684,7 +684,7 @@ export default function PagesHorizontalViewer({
                             >
                               <img
                                 className={cn(
-                                  "viewer-image-mobile !pointer-events-auto max-h-[calc(100dvh-64px)] object-contain",
+                                  "viewer-image-mobile pointer-events-auto! max-h-[calc(100dvh-64px)] object-contain",
                                 )}
                                 onContextMenu={(e) => {
                                   e.preventDefault();
@@ -863,7 +863,7 @@ export default function PagesHorizontalViewer({
               {pageNumber > 1 && (
                 <div
                   className={cn(
-                    "group absolute left-0 top-0 z-[1] flex h-full items-center",
+                    "group absolute left-0 top-0 z-1 flex h-full items-center",
                     isMobile ? "w-1/6" : "w-32",
                     isMobile ? "justify-start pl-1" : "justify-start pl-4",
                   )}
@@ -886,7 +886,7 @@ export default function PagesHorizontalViewer({
               {pageNumber < numPagesWithAccountCreation && (
                 <div
                   className={cn(
-                    "group absolute right-0 top-0 z-[1] flex h-full items-center",
+                    "group absolute right-0 top-0 z-1 flex h-full items-center",
                     isMobile ? "w-1/6" : "w-32",
                     isMobile ? "justify-end pr-1" : "justify-end pr-4",
                   )}

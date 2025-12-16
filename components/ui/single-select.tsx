@@ -157,12 +157,12 @@ export const SingleSelect = React.forwardRef<
             {...props}
             onClick={handleTogglePopover}
             className={cn(
-              "flex h-auto w-full items-center justify-start gap-3 rounded-md border border-input bg-inherit px-3 py-2 hover:bg-inherit focus:border-muted-foreground focus:outline-none focus:ring-1 focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent [&_svg]:pointer-events-auto",
+              "flex h-auto w-full items-center justify-start gap-3 rounded-md border border-input bg-inherit px-3 py-2 hover:bg-inherit focus:border-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent [&_svg]:pointer-events-auto",
               className,
             )}
           >
             {triggerIcon || (
-              <Link2Icon className="!size-4 shrink-0 text-muted-foreground" />
+              <Link2Icon className="size-4! shrink-0 text-muted-foreground" />
             )}
             {loading ? (
               <div className="flex w-full items-center justify-between">
@@ -199,7 +199,7 @@ export const SingleSelect = React.forwardRef<
               noIcon
               wrapperClassName="px-0"
               className={cn(
-                "grow border-0 py-3 outline-none placeholder:text-neutral-400 focus:ring-0 sm:text-sm",
+                "grow border-0 py-3 outline-hidden placeholder:text-neutral-400 focus:ring-0 sm:text-sm",
                 inputClassName,
               )}
               onKeyDown={handleInputKeyDown}

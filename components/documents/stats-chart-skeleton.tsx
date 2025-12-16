@@ -17,7 +17,7 @@ const StatsChartSkeleton = ({ className }: { className?: string }) => {
         <div className="flex w-full items-end space-x-4 sm:space-x-5 md:space-x-8">
           {[250, 200, 150, 100, 50, 20].map((item, i) => (
             <Skeleton
-              className="w-16 !rounded-t-lg rounded-b-none sm:w-20 md:w-28"
+              className="w-16 rounded-t-lg! rounded-b-none sm:w-20 md:w-28"
               style={{ height: `${item}px` }}
               key={i}
             />

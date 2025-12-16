@@ -108,7 +108,7 @@ export default async function VerifyInvitationPage({
                   <h3 className="text-balance py-1 text-sm font-normal text-gray-800">
                     You&apos;ve been invited to join a team on Paperky
                   </h3>
-                  <div className="mt-2 flex w-auto items-center justify-center gap-2 rounded-full bg-gray-50 px-5 py-2.5 text-sm text-gray-600 shadow-sm">
+                  <div className="mt-2 flex w-auto items-center justify-center gap-2 rounded-full bg-gray-50 px-5 py-2.5 text-sm text-gray-600 shadow-xs">
                     <MailIcon className="h-4 w-4 text-gray-400" />
                     {email}
                   </div>

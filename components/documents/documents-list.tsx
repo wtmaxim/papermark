@@ -366,7 +366,7 @@ export function DocumentsList({
 
       return (
         <div className="mb-2 flex items-center gap-x-1 rounded-3xl bg-gray-100 text-sm text-foreground dark:bg-gray-800">
-          <div className="ml-5 flex h-8 w-8 items-center justify-center rounded-full hover:bg-gray-200 hover:dark:bg-gray-700">
+          <div className="ml-5 flex h-8 w-8 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
             <ButtonTooltip
               content={isAllSelected ? "Deselect all" : "Select all"}
             >
@@ -382,7 +382,7 @@ export function DocumentsList({
           <ButtonTooltip content="Clear selection">
             <Button
               onClick={resetSelection}
-              className="mx-1.5 my-1 size-8 rounded-full hover:bg-gray-200 hover:dark:bg-gray-700"
+              className="mx-1.5 my-1 size-8 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
               variant="ghost"
               size="icon"
             >
@@ -404,7 +404,7 @@ export function DocumentsList({
           <ButtonTooltip content="Move">
             <Button
               onClick={() => setMoveFolderOpen(true)}
-              className="mx-1.5 my-1 size-8 rounded-full hover:bg-gray-200 hover:dark:bg-gray-700"
+              className="mx-1.5 my-1 size-8 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
               variant="ghost"
               size="icon"
             >

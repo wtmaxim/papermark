@@ -369,7 +369,7 @@ export default function PagesVerticalViewer({
 
     return () => {
       window.removeEventListener("focus", handleFocus);
-      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("blur-sm", handleBlur);
     };
   }, [screenshotProtectionEnabled]);
 

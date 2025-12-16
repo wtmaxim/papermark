@@ -227,7 +227,7 @@ export default function NotionForm() {
                     name="notion-link"
                     id="notion-link"
                     placeholder="notion.site/..."
-                    className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
+                    className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
                     value={notionLink || ""}
                     onChange={(e) => setNotionLink(e.target.value)}
                   />

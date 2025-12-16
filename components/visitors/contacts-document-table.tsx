@@ -155,7 +155,7 @@ export function ContactsDocumentsTable({
                 isLight: true,
               })}
               <div className="min-w-0 flex-1">
-                <div className="focus:outline-none">
+                <div className="focus:outline-hidden">
                   <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
                     {view.document.name}
                   </p>

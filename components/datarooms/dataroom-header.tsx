@@ -49,7 +49,7 @@ export const DataroomHeader = ({
                   href={`/datarooms/${dataroom?.id}/settings/notifications`}
                 >
                   <Button variant="ghost" size="icon" className="size-8">
-                    <BellRingIcon className="inline-block !size-4 text-[#fb7a00]" />
+                    <BellRingIcon className="inline-block size-4! text-[#fb7a00]" />
                   </Button>
                 </Link>
               </TooltipTrigger>

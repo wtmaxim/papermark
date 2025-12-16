@@ -53,7 +53,7 @@ const SelectTeam = ({ teams, currentTeam, isLoading }: TeamContextType) => {
                 key={team.id}
                 onClick={() => switchTeam(team)}
                 className={cn(
-                  `flex w-full cursor-pointer items-center justify-between truncate px-3 py-2 text-sm font-normal transition-all duration-75 hover:bg-gray-200 hover:dark:bg-gray-800`,
+                  `flex w-full cursor-pointer items-center justify-between truncate px-3 py-2 text-sm font-normal transition-all duration-75 hover:bg-gray-200 dark:hover:bg-gray-800`,
                   team.id === currentTeam?.id && "font-medium",
                 )}
               >
@@ -78,7 +78,7 @@ const SelectTeam = ({ teams, currentTeam, isLoading }: TeamContextType) => {
 
             <Link
               href="/settings/people"
-              className="mx-auto mb-1 mt-3 flex w-[92%] items-center rounded-sm border px-[10px] py-2 text-sm duration-100 hover:cursor-pointer hover:bg-gray-200 hover:dark:bg-gray-800"
+              className="mx-auto mb-1 mt-3 flex w-[92%] items-center rounded-sm border px-[10px] py-2 text-sm duration-100 hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800"
             >
               <PlusIcon className="mr-2 h-4 w-4" />
               Invite Members

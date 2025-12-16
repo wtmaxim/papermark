@@ -31,7 +31,7 @@ export default function GroupCard({
             <div className="hidden rounded-full border border-gray-200 sm:block">
               <div
                 className={cn(
-                  "rounded-full border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3",
+                  "rounded-full border border-white bg-linear-to-t from-gray-100 p-1 md:p-3",
                 )}
               >
                 <BoxesIcon className="size-5" />
@@ -63,7 +63,7 @@ export default function GroupCard({
                 <Button
                   // size="icon"
                   variant="outline"
-                  className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
+                  className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
                 >
                   <span className="sr-only">Open menu</span>
                   <MoreVertical className="h-4 w-4" />

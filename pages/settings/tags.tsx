@@ -274,7 +274,7 @@ export default function TagSetting() {
                               <DropdownMenuTrigger asChild>
                                 <Button
                                   variant="ghost"
-                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
+                                  className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
                                 >
                                   <span className="sr-only">Open menu</span>
                                   <MoreHorizontalIcon className="h-4 w-4" />

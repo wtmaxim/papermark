@@ -112,7 +112,7 @@ const WebhookEvent = ({ event }: { event: any }) => {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="flex items-center justify-between gap-5 px-3.5 py-3 hover:bg-gray-50 focus:outline-none dark:hover:bg-gray-800"
+        className="flex items-center justify-between gap-5 px-3.5 py-3 hover:bg-gray-50 focus:outline-hidden dark:hover:bg-gray-800"
       >
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-2.5">
@@ -167,7 +167,7 @@ const WebhookEvent = ({ event }: { event: any }) => {
               </Button>
             </SheetDescription>
           </SheetHeader>
-          <ScrollArea className="flex-grow">
+          <ScrollArea className="grow">
             <div className="grid gap-4 border-t border-gray-200 bg-transparent py-4">
               <h4 className="font-semibold">Response</h4>
               <div className="flex items-center gap-8">

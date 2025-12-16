@@ -51,7 +51,7 @@ export const VisitorAvatar = ({
         content="Visit is archived and excluded from the document statistics"
       >
         <Avatar
-          className={cn("hidden flex-shrink-0 sm:inline-flex", className)}
+          className={cn("hidden shrink-0 sm:inline-flex", className)}
         >
           <AvatarFallback className="bg-gray-200/50 dark:bg-gray-200/50">
             <ArchiveIcon className="h-4 w-4" />
@@ -62,7 +62,7 @@ export const VisitorAvatar = ({
   }
   if (!viewerEmail) {
     return (
-      <Avatar className={cn("hidden flex-shrink-0 sm:inline-flex", className)}>
+      <Avatar className={cn("hidden shrink-0 sm:inline-flex", className)}>
         <AvatarFallback className="bg-gray-200/50 dark:bg-gray-200/50">
           AN
         </AvatarFallback>
@@ -73,7 +73,7 @@ export const VisitorAvatar = ({
   return (
     <Avatar
       className={cn(
-        "hidden flex-shrink-0 border border-gray-200 dark:border-gray-800 sm:inline-flex",
+        "hidden shrink-0 border border-gray-200 dark:border-gray-800 sm:inline-flex",
         className,
       )}
     >
@@ -86,7 +86,7 @@ export const VisitorAvatar = ({
       <AvatarFallback
         className={`${getColorFromHash(
           hashString(viewerEmail),
-        )} dark:${getColorFromHash(hashString(viewerEmail))} border border-white bg-gradient-to-t from-gray-100 p-1 dark:border-gray-900 dark:from-gray-900`}
+        )} dark:${getColorFromHash(hashString(viewerEmail))} border border-white bg-linear-to-t from-gray-100 p-1 dark:border-gray-900 dark:from-gray-900`}
       >
         {viewerEmail?.slice(0, 2).toUpperCase()}
       </AvatarFallback>

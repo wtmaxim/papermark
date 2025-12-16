@@ -222,7 +222,7 @@ export const MultiSelect = React.forwardRef<
     //     onValueChange(allValues);
     //   }
     // };
-    // flex w-full rounded-none rounded-l-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm
+    // flex w-full rounded-none rounded-l-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm
     return (
       <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen} modal>
         <PopoverTrigger asChild>
@@ -231,12 +231,12 @@ export const MultiSelect = React.forwardRef<
             {...props}
             onClick={handleTogglePopover}
             className={cn(
-              "flex h-auto w-full items-center justify-between rounded-md border border-input bg-inherit px-3 py-1.5 hover:bg-inherit focus:border-muted-foreground focus:outline-none focus:ring-1 focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent [&_svg]:pointer-events-auto",
+              "flex h-auto w-full items-center justify-between rounded-md border border-input bg-inherit px-3 py-1.5 hover:bg-inherit focus:border-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent [&_svg]:pointer-events-auto",
               className,
             )}
           >
             {triggerIcon || (
-              <TagIcon className="!size-4 shrink-0 text-muted-foreground" />
+              <TagIcon className="size-4! shrink-0 text-muted-foreground" />
             )}
             {loading ? (
               <div className="mx-auto flex w-full items-center justify-between">
@@ -276,7 +276,7 @@ export const MultiSelect = React.forwardRef<
         </PopoverTrigger>
         <PopoverContent
           className={cn(
-            "w-auto p-0 sm:w-[600px] sm:max-w-[35rem]",
+            "w-auto p-0 sm:w-[600px] sm:max-w-140",
             popoverClassName,
           )}
           align="start"
@@ -290,7 +290,7 @@ export const MultiSelect = React.forwardRef<
               noIcon
               wrapperClassName="px-0"
               className={cn(
-                "grow border-0 py-3 outline-none placeholder:text-neutral-400 focus:ring-0 sm:text-sm",
+                "grow border-0 py-3 outline-hidden placeholder:text-neutral-400 focus:ring-0 sm:text-sm",
                 inputClassName,
               )}
               onKeyDown={handleInputKeyDown}

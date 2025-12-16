@@ -200,7 +200,7 @@ export function AnnotationPanel({
             currentPageAnnotations.map((annotation) => (
               <div
                 key={annotation.id}
-                className="rounded-lg border border-gray-300/50 bg-white/95 shadow-sm backdrop-blur-sm transition-all hover:border-gray-400/60 hover:bg-white"
+                className="rounded-lg border border-gray-300/50 bg-white/95 shadow-xs backdrop-blur-xs transition-all hover:border-gray-400/60 hover:bg-white"
               >
                 <Collapsible
                   open={expandedAnnotations.has(annotation.id)}

@@ -248,7 +248,7 @@ export default function ImageViewer({
 
     return () => {
       window.removeEventListener("focus", handleFocus);
-      window.removeEventListener("blur", handleBlur);
+      window.removeEventListener("blur-sm", handleBlur);
     };
   }, [screenshotProtectionEnabled]);
 
@@ -355,7 +355,7 @@ export default function ImageViewer({
               >
                 <div className="viewer-container relative mx-auto flex w-full justify-center">
                   <img
-                    className="viewer-image-mobile !pointer-events-auto max-h-[calc(100dvh-64px)] object-contain"
+                    className="viewer-image-mobile pointer-events-auto! max-h-[calc(100dvh-64px)] object-contain"
                     onContextMenu={(e) => {
                       e.preventDefault();
                       e.stopPropagation();

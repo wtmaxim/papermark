@@ -37,7 +37,7 @@ export function AwayPoster({
   return (
     <>
       <div
-        className="fixed inset-0 z-[99998] bg-black/50 backdrop-blur-sm"
+        className="fixed inset-0 z-99998 bg-black/50 backdrop-blur-xs"
         aria-hidden="true"
       />
 
@@ -47,7 +47,7 @@ export function AwayPoster({
         aria-labelledby="away-poster-title"
         aria-describedby="away-poster-description"
         className={cn(
-          "fixed bottom-4 left-4 right-4 z-[99999] w-full max-w-md rounded-md border bg-card p-4 text-card-foreground shadow-lg",
+          "fixed bottom-4 left-4 right-4 z-99999 w-full max-w-md rounded-md border bg-card p-4 text-card-foreground shadow-lg",
           "sm:bottom-6 sm:left-6 sm:right-auto sm:w-auto sm:max-w-lg",
           "animate-in fade-in slide-in-from-bottom",
           className,

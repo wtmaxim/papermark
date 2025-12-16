@@ -22,7 +22,7 @@ export default function AcceptInvitationButton({
   return (
     <Link href={verificationUrl}>
       <Button
-        className="focus:shadow-outline w-full transform rounded-lg bg-gray-800 px-4 py-3 text-white transition-colors duration-300 ease-in-out hover:bg-gray-900 focus:outline-none"
+        className="focus:shadow-outline w-full transform rounded-lg bg-gray-800 px-4 py-3 text-white transition-colors duration-300 ease-in-out hover:bg-gray-900 focus:outline-hidden"
         onClick={handleAccept}
         loading={isLoading}
       >

@@ -344,7 +344,7 @@ class VideoTracker {
       if (this.isPlaying) {
         this.trackEvent("played", undefined, true);
       }
-      this.trackEvent("blur", undefined, true);
+      this.trackEvent("blur-sm", undefined, true);
     } else if (isVisible) {
       this.hasTrackedUnload = false;
       this.trackEvent("focus");

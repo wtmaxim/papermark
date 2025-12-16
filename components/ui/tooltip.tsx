@@ -88,7 +88,7 @@ export const BadgeTooltip = ({
               {link && (
                 <a
                   href={link}
-                  className="underline underline-offset-4 transition-all hover:text-gray-800 hover:dark:text-muted-foreground/80"
+                  className="underline underline-offset-4 transition-all hover:text-gray-800 dark:hover:text-muted-foreground/80"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
@@ -135,7 +135,7 @@ export const ButtonTooltip = ({
               {content}{" "}
               <a
                 href={link}
-                className="underline underline-offset-4 transition-all hover:text-gray-800 hover:dark:text-muted-foreground/80"
+                className="underline underline-offset-4 transition-all hover:text-gray-800 dark:hover:text-muted-foreground/80"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -131,8 +131,8 @@ export function SmartDateTimePicker({
       <div
         className={cn(
           "mt-2 flex w-full items-center justify-between rounded-md border border-neutral-300",
-          "bg-white shadow-sm transition-all focus-within:border-neutral-800",
-          "focus-within:outline-none focus-within:ring-1 focus-within:ring-neutral-500",
+          "bg-white shadow-xs transition-all focus-within:border-neutral-800",
+          "focus-within:outline-hidden focus-within:ring-1 focus-within:ring-neutral-500",
         )}
       >
         <input
@@ -146,7 +146,7 @@ export function SmartDateTimePicker({
           onChange={(e) => {
             inputRef.current!.value = e.target.value;
           }}
-          className="flex-1 border-none bg-transparent text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-0 sm:text-sm"
+          className="flex-1 border-none bg-transparent text-neutral-900 placeholder-neutral-400 focus:outline-hidden focus:ring-0 sm:text-sm"
         />
         {showCalendarIcon && (
           <input
@@ -155,7 +155,7 @@ export function SmartDateTimePicker({
             required={required}
             value={value ? getDateTimeLocal(value) : ""}
             onChange={handleCalendarChange}
-            className="w-[40px] border-none bg-transparent text-neutral-500 focus:outline-none focus:ring-0 sm:text-sm"
+            className="w-[40px] border-none bg-transparent text-neutral-500 focus:outline-hidden focus:ring-0 sm:text-sm"
           />
         )}
       </div>

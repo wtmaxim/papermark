@@ -10,7 +10,7 @@ export const GroupHeader = ({
   groupName: string;
 }) => {
   return (
-    <div className="mx-auto !mt-4 flex w-full items-center gap-2">
+    <div className="mx-auto mt-4! flex w-full items-center gap-2">
       <Link href={`/datarooms/${dataroomId}/groups`}>
         <h2 className="text-md underline decoration-gray-500 underline-offset-4">
           All Groups

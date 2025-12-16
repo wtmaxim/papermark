@@ -333,7 +333,7 @@ export default function Branding() {
                         className="group relative mt-2 flex h-20 w-48 cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 transition-all hover:border-gray-400 hover:bg-gray-100"
                       >
                         <div
-                          className="absolute z-[5] h-full w-full rounded-lg"
+                          className="absolute z-5 h-full w-full rounded-lg"
                           onDragOver={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
@@ -435,7 +435,7 @@ export default function Branding() {
                           className="group relative mt-2 flex h-32 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 transition-all hover:border-gray-400 hover:bg-gray-100"
                         >
                           <div
-                            className="absolute z-[5] h-full w-full rounded-lg"
+                            className="absolute z-5 h-full w-full rounded-lg"
                             onDragOver={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
@@ -548,7 +548,7 @@ export default function Branding() {
                         <Popover>
                           <PopoverTrigger>
                             <div
-                              className="h-10 w-10 cursor-pointer rounded-md border-2 border-gray-300 shadow-sm transition-all hover:border-gray-400"
+                              className="h-10 w-10 cursor-pointer rounded-md border-2 border-gray-300 shadow-xs transition-all hover:border-gray-400"
                               style={{ backgroundColor: brandColor }}
                             />
                           </PopoverTrigger>
@@ -560,7 +560,7 @@ export default function Branding() {
                           </PopoverContent>
                         </Popover>
                         <HexColorInput
-                          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+                          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm shadow-xs placeholder:text-muted-foreground focus:border-gray-400 focus:outline-hidden focus:ring-1 focus:ring-gray-400"
                           color={brandColor}
                           onChange={setBrandColor}
                           prefixed
@@ -584,7 +584,7 @@ export default function Branding() {
                         <Popover>
                           <PopoverTrigger>
                             <div
-                              className="h-10 w-10 cursor-pointer rounded-md border-2 border-gray-300 shadow-sm transition-all hover:border-gray-400"
+                              className="h-10 w-10 cursor-pointer rounded-md border-2 border-gray-300 shadow-xs transition-all hover:border-gray-400"
                               style={{ backgroundColor: accentColor }}
                             />
                           </PopoverTrigger>
@@ -596,7 +596,7 @@ export default function Branding() {
                           </PopoverContent>
                         </Popover>
                         <HexColorInput
-                          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+                          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm shadow-xs placeholder:text-muted-foreground focus:border-gray-400 focus:outline-hidden focus:ring-1 focus:ring-gray-400"
                           color={accentColor}
                           onChange={setAccentColor}
                           prefixed
@@ -604,7 +604,7 @@ export default function Branding() {
                       </div>
                       <div className="flex flex-wrap gap-2">
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-white shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-white shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#ffffff")}
                         >
                           {accentColor === "#ffffff" && (
@@ -612,7 +612,7 @@ export default function Branding() {
                           )}
                         </div>
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-50 shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-50 shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#f9fafb")}
                         >
                           {accentColor === "#f9fafb" && (
@@ -620,7 +620,7 @@ export default function Branding() {
                           )}
                         </div>
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-200 shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-200 shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#e5e7eb")}
                         >
                           {accentColor === "#e5e7eb" && (
@@ -628,7 +628,7 @@ export default function Branding() {
                           )}
                         </div>
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-400 shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-400 shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#9ca3af")}
                         >
                           {accentColor === "#9ca3af" && (
@@ -636,7 +636,7 @@ export default function Branding() {
                           )}
                         </div>
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-800 shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-800 shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#1f2937")}
                         >
                           {accentColor === "#1f2937" && (
@@ -644,7 +644,7 @@ export default function Branding() {
                           )}
                         </div>
                         <div
-                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-950 shadow-sm ring-2 ring-gray-300 transition-all hover:ring-gray-400"
+                          className="relative h-10 w-10 cursor-pointer rounded-md bg-gray-950 shadow-xs ring-2 ring-gray-300 transition-all hover:ring-gray-400"
                           onClick={() => setAccentColor("#030712")}
                         >
                           {accentColor === "#030712" && (

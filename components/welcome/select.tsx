@@ -51,7 +51,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
         >
           <PresentationIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p>Pitchdeck</p>
@@ -66,7 +66,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
         >
           <FileChartPieIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p>Sales document</p>
@@ -81,7 +81,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
         >
           <NotionIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p>Notion Page</p>
@@ -95,7 +95,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
         >
           <FileIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p>Another document</p>
@@ -107,7 +107,7 @@ export default function Next() {
         className="text-center text-sm text-muted-foreground"
       >
         {/* <button
-          className="text-center text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
+          className="text-center text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline dark:hover:text-muted-foreground/80"
           onClick={() =>
             router.push({
               pathname: "/welcome",

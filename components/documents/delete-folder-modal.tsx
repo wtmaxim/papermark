@@ -80,7 +80,7 @@ export function DeleteFolderModal({
             </span>{" "}
             below
           </label>
-          <div className="relative mt-1 rounded-md shadow-sm">
+          <div className="relative mt-1 rounded-md shadow-xs">
             <Input
               type="text"
               name="verification"
@@ -90,7 +90,7 @@ export function DeleteFolderModal({
               pattern={requiredText}
               required
               autoComplete="off"
-              className="bg-white dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent"
+              className="bg-white dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent"
             />
           </div>
         </div>

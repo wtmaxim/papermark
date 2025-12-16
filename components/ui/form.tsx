@@ -98,7 +98,7 @@ export function Form({
           inputAttrs.type === "email" && e.key === " " && e.preventDefault()
         }
         className={cn(
-          "w-full max-w-md focus:border-gray-500 focus:outline-none focus:ring-gray-500",
+          "w-full max-w-md focus:border-gray-500 focus:outline-hidden focus:ring-gray-500",
           {
             "cursor-not-allowed bg-gray-100 text-gray-400": disabledTooltip,
           },

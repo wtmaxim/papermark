@@ -58,7 +58,7 @@ const columns: ColumnDef<Document>[] = [
     cell: ({ row }) => (
       <div className="flex items-center overflow-visible sm:space-x-3">
         <div className="min-w-0 flex-1">
-          <div className="focus:outline-none">
+          <div className="focus:outline-hidden">
             <Link
               href={`/documents/${row.original.id}`}
               className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-400"
@@ -244,7 +244,7 @@ export default function DocumentsTable({
     } else {
       return (
         <Button variant="outline" size="sm" onClick={handleExport}>
-          <Download className="!size-4" />
+          <Download className="size-4!" />
           Export
         </Button>
       );
@@ -305,7 +305,7 @@ export default function DocumentsTable({
                 >
                   <div className="flex w-full flex-col items-center justify-center gap-4 rounded-xl py-4">
                     <div className="hidden rounded-full sm:block">
-                      <div className="rounded-full border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3">
+                      <div className="rounded-full border border-white bg-linear-to-t from-gray-100 p-1 md:p-3">
                         <FileIcon className="size-6" />
                       </div>
                     </div>

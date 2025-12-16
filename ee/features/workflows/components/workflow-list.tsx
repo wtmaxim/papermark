@@ -37,7 +37,7 @@ export function WorkflowList({ workflows }: WorkflowListProps) {
         <Link
           key={workflow.id}
           href={`/workflows/${workflow.id}`}
-          className="group rounded-xl border bg-card p-5 transition-all hover:border-gray-400 hover:shadow-sm dark:border-gray-700 dark:bg-secondary dark:hover:border-gray-600"
+          className="group rounded-xl border bg-card p-5 transition-all hover:border-gray-400 hover:shadow-xs dark:border-gray-700 dark:bg-secondary dark:hover:border-gray-600"
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
