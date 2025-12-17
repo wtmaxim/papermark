@@ -117,6 +117,7 @@
     "next-themes": "^0.4.6",
     "nodemailer": "^7.0.11",
     "notion-client": "^7.7.1",
+    "notion-types": "^7.7.1",
     "notion-utils": "^7.7.1",
     "nuqs": "^2.8.5",
     "openai": "^6.10.0",
