@@ -105,6 +105,7 @@
     "input-otp": "^1.4.2",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.3",
+    "libphonenumber-js": "^1.12.31",
     "lucide-react": "^0.556.0",
     "mime-types": "^3.0.2",
     "motion": "^12.23.26",
