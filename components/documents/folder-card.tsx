@@ -157,7 +157,7 @@ export default function FolderCard({
     <>
       <div
         onClick={handleCardClick}
-        className="group/row relative flex items-center justify-between rounded-lg border-0 bg-white p-3 ring-1 ring-gray-400 transition-all hover:bg-secondary hover:ring-gray-500 dark:bg-secondary dark:ring-gray-500 dark:hover:ring-gray-400 sm:p-4"
+        className="group/row relative flex items-center justify-between rounded-lg border-0 bg-white p-3 ring-1 ring-gray-400 transition-all hover:bg-secondary hover:ring-gray-500 dark:bg-secondary dark:ring-gray-500 hover:dark:ring-gray-400 sm:p-4"
       >
         <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
           {!isSelected && !isHovered ? (
@@ -213,7 +213,7 @@ export default function FolderCard({
               <Button
                 // size="icon"
                 variant="outline"
-                className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
+                className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
               >
                 <span className="sr-only">Open menu</span>
                 <MoreVertical className="h-4 w-4" />

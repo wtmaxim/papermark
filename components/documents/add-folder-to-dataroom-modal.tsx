@@ -123,9 +123,9 @@ export function AddFolderToDataroomModal({
                 key={dataroom.id}
                 value={dataroom.id}
                 disabled={dataroom.id === dataroomId}
-                className="wrap-break-word"
+                className="break-words"
               >
-                <span className="wrap-break-word line-clamp-1">
+                <span className="break-words line-clamp-1">
                   {dataroom.name}
                   {dataroom.id === dataroomId ? " (current)" : ""}
                 </span>

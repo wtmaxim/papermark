@@ -199,7 +199,7 @@ export const VIDEO_EVENT_TYPES = [
 
   // View state events
   "focus", // Window/tab gained focus
-  "blur-sm", // Window/tab lost focus
+  "blur", // Window/tab lost focus
   "enterfullscreen", // Entered fullscreen
   "exitfullscreen", // Exited fullscreen
 ] as const;

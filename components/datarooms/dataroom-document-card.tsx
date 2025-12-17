@@ -193,7 +193,7 @@ export default function DataroomDocumentCard({
       <div
         onClick={handleCardClick}
         className={cn(
-          "group/row relative flex flex-col rounded-lg border-0 bg-white ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 dark:hover:ring-gray-500",
+          "group/row relative flex flex-col rounded-lg border-0 bg-white ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 hover:dark:ring-gray-500",
           isDragging ? "cursor-grabbing" : "cursor-pointer",
           isHovered && "bg-secondary ring-gray-300 dark:ring-gray-500",
         )}
@@ -269,9 +269,9 @@ export default function DataroomDocumentCard({
                 type: dataroomDocument.document.type,
                 numPages: null, // Not available in this context
               }}
-              variant="outline-solid"
+              variant="outline"
               size="icon"
-              className="z-10 h-8 w-8 border-gray-200 bg-transparent hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
+              className="z-10 h-8 w-8 border-gray-200 bg-transparent hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
             />
 
             <DropdownMenu open={menuOpen} onOpenChange={handleMenuStateChange}>
@@ -279,7 +279,7 @@ export default function DataroomDocumentCard({
                 <Button
                   // size="icon"
                   variant="outline"
-                  className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
+                  className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
                 >
                   <span className="sr-only">Open menu</span>
                   <MoreVertical className="h-4 w-4" />

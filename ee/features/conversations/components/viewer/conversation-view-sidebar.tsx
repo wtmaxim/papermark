@@ -227,7 +227,7 @@ export function ConversationViewSidebar({
                 {activeConversation ? (
                   <div className="flex flex-1 flex-col overflow-hidden">
                     {/* Conversation Header */}
-                    <div className="shrink-0 border-b p-4">
+                    <div className="flex-shrink-0 border-b p-4">
                       <div className="flex items-center justify-between">
                         <div className="flex min-w-0 flex-1 items-center">
                           <Button
@@ -335,14 +335,14 @@ export function ConversationViewSidebar({
                     {/* Message Input */}
                     <form
                       onSubmit={handleSendMessage}
-                      className="shrink-0 border-t p-3"
+                      className="flex-shrink-0 border-t p-3"
                     >
                       <div className="flex gap-2">
                         <input
                           type="text"
                           value={newMessage}
                           onChange={(e) => setNewMessage(e.target.value)}
-                          className="flex-1 rounded-md border border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring"
+                          className="flex-1 rounded-md border border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                           placeholder="Type your message..."
                         />
                         <Button type="submit" disabled={!newMessage.trim()}>
@@ -383,7 +383,7 @@ export function ConversationViewSidebar({
                           value={newMessage}
                           onChange={(e) => setNewMessage(e.target.value)}
                           placeholder="Type your question..."
-                          className="min-h-[100px] w-full rounded-md border border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring"
+                          className="min-h-[100px] w-full rounded-md border border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                           required
                         />
                       </div>
@@ -404,7 +404,7 @@ export function ConversationViewSidebar({
                   </div>
                 ) : (
                   <div className="flex flex-1 flex-col overflow-hidden">
-                    <div className="shrink-0 p-4">
+                    <div className="flex-shrink-0 p-4">
                       <Button
                         onClick={() => setIsNewConversationFormOpen(true)}
                         className="w-full"

@@ -26,7 +26,7 @@ export default function ViewPage() {
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="flex flex-1 items-center justify-start">
-              <div className="relative flex h-16 w-36 shrink-0 items-center overflow-y-hidden">
+              <div className="relative flex h-16 w-36 flex-shrink-0 items-center overflow-y-hidden">
                 {brandLogo ? (
                   <img
                     className="w-full object-contain"
@@ -114,7 +114,7 @@ export default function ViewPage() {
         </div>
 
         {/* Detail view */}
-        <div className="grow overflow-auto">
+        <div className="flex-grow overflow-auto">
           <div className="h-full space-y-8 px-3 pb-4 pt-4 md:px-6 md:pt-6 lg:px-8 lg:pt-9 xl:px-14">
             <div className="space-y-4">
               <div className="text-sm text-muted-foreground">Home</div>

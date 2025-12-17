@@ -827,7 +827,7 @@ export default function UploadZone({
         className={cn(
           "absolute inset-0 z-40 -m-1 rounded-lg border-2 border-dashed",
           isDragActive
-            ? "pointer-events-auto border-primary/50 bg-gray-100/75 backdrop-blur-xs dark:bg-gray-800/75"
+            ? "pointer-events-auto border-primary/50 bg-gray-100/75 backdrop-blur-sm dark:bg-gray-800/75"
             : "pointer-events-none border-none",
         )}
       >

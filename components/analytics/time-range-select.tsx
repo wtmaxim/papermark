@@ -213,7 +213,7 @@ const UpgradeButton = () => {
         onClick={() => setOpen(true)}
         title="Upgrade to view data beyond 30 days"
       >
-        Custom Date <CrownIcon className="size-4!" />
+        Custom Date <CrownIcon className="!size-4" />
       </Button>
       <UpgradePlanModal
         clickedPlan={PlanEnum.Pro}

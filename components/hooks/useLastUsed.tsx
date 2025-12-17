@@ -33,7 +33,7 @@ export const LastUsed = ({ className }: { className?: string | undefined }) => {
     <div className="absolute right-2 top-1/2 w-fit -translate-y-1/2 sm:right-[-50px]">
       <div
         className={cn(
-          "relative z-999 rounded-md bg-input px-2 py-1 text-xs text-foreground",
+          "relative z-[999] rounded-md bg-input px-2 py-1 text-xs text-foreground",
           className,
         )}
       >

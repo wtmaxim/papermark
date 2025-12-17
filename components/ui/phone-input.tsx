@@ -23,7 +23,7 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> =
       return (
         <RPNInput.default
           ref={ref}
-          className={cn("shadow-2xs flex rounded-md", className)}
+          className={cn("shadow-xs flex rounded-md", className)}
           international
           flagComponent={FlagComponent}
           countrySelectComponent={CountrySelect}
@@ -50,7 +50,7 @@ const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
     <Input
       data-slot="phone-input"
       className={cn(
-        "-ms-px rounded-s-none border-0 bg-transparent py-1.5 shadow-xs ring-1 ring-inset ring-gray-600 focus:ring-2 focus:ring-inset focus:ring-gray-300 focus-visible:z-10",
+        "-ms-px rounded-s-none border-0 bg-transparent py-1.5 shadow-sm ring-1 ring-inset ring-gray-600 focus:ring-2 focus:ring-inset focus:ring-gray-300 focus-visible:z-10",
         className,
       )}
       style={
@@ -85,7 +85,7 @@ const CountrySelect = ({
 
   return (
     <div
-      className="has-aria-invalid:border-destructive/60 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-disabled:pointer-events-none has-disabled:opacity-50 relative inline-flex h-9 items-center self-stretch rounded-s-md border-0 bg-transparent py-2 pe-2 ps-3 text-muted-foreground shadow-xs outline-hidden ring-1 ring-inset ring-gray-600 transition-[color,box-shadow] focus-within:z-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gray-300 hover:text-foreground"
+      className="has-aria-invalid:border-destructive/60 has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-disabled:pointer-events-none has-disabled:opacity-50 relative inline-flex h-9 items-center self-stretch rounded-s-md border-0 bg-transparent py-2 pe-2 ps-3 text-muted-foreground shadow-sm outline-none ring-1 ring-inset ring-gray-600 transition-[color,box-shadow] focus-within:z-10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gray-300 hover:text-foreground"
       style={
         {
           backgroundColor: "var(--phone-input-bg)",

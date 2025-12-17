@@ -157,7 +157,7 @@ export default function OGSection({
 
       {enabled && (
         <motion.div
-          className="relative mt-4 space-y-3 rounded-md shadow-xs"
+          className="relative mt-4 space-y-3 rounded-md shadow-sm"
           {...FADE_IN_ANIMATION_SETTINGS}
         >
           <div>
@@ -169,15 +169,15 @@ export default function OGSection({
             </div>
             <label
               htmlFor="image"
-              className="group relative mt-1 flex aspect-1200/630 h-fit cursor-pointer flex-col items-center justify-center rounded-md border border-input bg-white shadow-xs transition-all hover:border-muted-foreground hover:bg-gray-50 hover:ring-muted-foreground dark:bg-gray-800 dark:hover:bg-transparent"
+              className="group relative mt-1 flex aspect-[1200/630] h-fit cursor-pointer flex-col items-center justify-center rounded-md border border-input bg-white shadow-sm transition-all hover:border-muted-foreground hover:bg-gray-50 hover:ring-muted-foreground dark:bg-gray-800 hover:dark:bg-transparent"
             >
               {false && (
-                <div className="absolute z-5 flex h-full w-full items-center justify-center rounded-md bg-white">
+                <div className="absolute z-[5] flex h-full w-full items-center justify-center rounded-md bg-white">
                   <LoadingSpinner />
                 </div>
               )}
               <div
-                className="absolute z-5 h-full w-full rounded-md"
+                className="absolute z-[5] h-full w-full rounded-md"
                 onDragOver={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -222,12 +222,12 @@ export default function OGSection({
               />
               <div
                 className={cn(
-                  "absolute z-3 flex h-full w-full flex-col items-center justify-center rounded-md transition-all",
+                  "absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md transition-all",
                   dragActive &&
                     "cursor-copy border-2 border-black bg-gray-50 opacity-100 dark:bg-transparent",
                   metaImage
                     ? "opacity-0 group-hover:opacity-100"
-                    : "group-hover:bg-gray-50 dark:group-hover:bg-transparent",
+                    : "group-hover:bg-gray-50 group-hover:dark:bg-transparent",
                 )}
               >
                 <ArrowUpTrayIcon
@@ -252,7 +252,7 @@ export default function OGSection({
                 />
               )}
             </label>
-            <div className="mt-1 flex rounded-md shadow-xs">
+            <div className="mt-1 flex rounded-md shadow-sm">
               <input
                 id="image"
                 name="image"
@@ -279,7 +279,7 @@ export default function OGSection({
             </div>
             <label
               htmlFor="faviconIcon"
-              className="group relative mt-1 flex size-14 cursor-pointer flex-col items-center justify-center rounded-md border border-gray-300 bg-white shadow-xs transition-all hover:bg-gray-50"
+              className="group relative mt-1 flex size-14 cursor-pointer flex-col items-center justify-center rounded-md border border-gray-300 bg-white shadow-sm transition-all hover:bg-gray-50"
               style={{
                 backgroundImage:
                   "linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(135deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(135deg, transparent 75%, #ccc 75%)",
@@ -288,12 +288,12 @@ export default function OGSection({
               }}
             >
               {false && (
-                <div className="absolute z-5 flex h-full w-full items-center justify-center rounded-md bg-white">
+                <div className="absolute z-[5] flex h-full w-full items-center justify-center rounded-md bg-white">
                   <LoadingSpinner />
                 </div>
               )}
               <div
-                className="absolute z-5 h-full w-full rounded-md"
+                className="absolute z-[5] h-full w-full rounded-md"
                 onDragOver={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -356,7 +356,7 @@ export default function OGSection({
                   faviconDragActive
                     ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
                     : ""
-                } absolute z-3 flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${
+                } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${
                   metaFavicon
                     ? "opacity-0 group-hover:opacity-100"
                     : "group-hover:bg-gray-50"
@@ -377,7 +377,7 @@ export default function OGSection({
                 />
               )}
             </label>
-            <div className="mt-1 hidden rounded-md shadow-xs">
+            <div className="mt-1 hidden rounded-md shadow-sm">
               <input
                 id="faviconIcon"
                 name="favicon"
@@ -395,7 +395,7 @@ export default function OGSection({
                 {metaTitle?.length || 0}/120
               </p>
             </div>
-            <div className="relative mt-1 flex rounded-md shadow-xs">
+            <div className="relative mt-1 flex rounded-md shadow-sm">
               {false && (
                 <div className="absolute flex h-full w-full items-center justify-center rounded-md border border-gray-300 bg-white">
                   <LoadingSpinner />
@@ -425,7 +425,7 @@ export default function OGSection({
                 {metaDescription?.length || 0}/240
               </p>
             </div>
-            <div className="relative mt-1 flex rounded-md shadow-xs">
+            <div className="relative mt-1 flex rounded-md shadow-sm">
               {false && (
                 <div className="absolute flex h-full w-full items-center justify-center rounded-md border border-gray-300 bg-white">
                   <LoadingSpinner />

@@ -1,48 +1,6 @@
-@import 'tailwindcss';
-
-@config '../tailwind.config.js';
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
-@utility animate-fade-in {
-  animation: fade-in 0.5s ease-in-out;
-}
-
-@utility touch-action-manipulation {
-  touch-action: manipulation;
-}
-
-@utility touch-action-pinch-zoom {
-  touch-action: pinch-zoom;
-}
-
-@utility transform-container {
-  transform-origin: 0 0;
-  will-change: transform;
-}
-
-@utility touch-zoom-container {
-  touch-action: none; /* Disable all browser handling */
-  -webkit-overflow-scrolling: touch;
-  isolation: isolate; /* Create a new stacking context */
-  contain: paint; /* Optimize rendering */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
   @keyframes fade-in {
@@ -52,6 +10,10 @@
     to {
       opacity: 1;
     }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
   }
 }
 
@@ -151,5 +113,27 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .touch-action-manipulation {
+    touch-action: manipulation;
+  }
+
+  .touch-action-pinch-zoom {
+    touch-action: pinch-zoom;
+  }
+
+  .transform-container {
+    transform-origin: 0 0;
+    will-change: transform;
+  }
+
+  .touch-zoom-container {
+    touch-action: none; /* Disable all browser handling */
+    -webkit-overflow-scrolling: touch;
+    isolation: isolate; /* Create a new stacking context */
+    contain: paint; /* Optimize rendering */
   }
 }

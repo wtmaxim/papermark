@@ -148,7 +148,7 @@ export default function DocumentUpload({
     <div className="col-span-full">
       <div
         {...getRootProps()}
-        className="group relative block cursor-pointer font-semibold text-foreground hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-500"
+        className="group relative block cursor-pointer font-semibold text-foreground hover:bg-gray-100 hover:text-gray-900 hover:dark:bg-gray-900 hover:dark:text-gray-500"
       >
         <input {...getInputProps()} name="file" className="sr-only" />
         <div className="flex min-h-[200px] items-center justify-center rounded-lg border border-dashed border-black/25 px-6 py-10 dark:border-white/25 md:min-w-full">

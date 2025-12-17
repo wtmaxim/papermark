@@ -96,7 +96,7 @@ export default function VerifyPage({
           <div className="flex flex-col gap-4 px-4 pt-8 sm:px-12">
             <div className="relative">
               <Link href={verification_url}>
-                <Button className="focus:shadow-outline w-full transform rounded bg-gray-800 px-4 py-2 text-white transition-colors duration-300 ease-in-out hover:bg-gray-900 focus:outline-hidden">
+                <Button className="focus:shadow-outline w-full transform rounded bg-gray-800 px-4 py-2 text-white transition-colors duration-300 ease-in-out hover:bg-gray-900 focus:outline-none">
                   Verify email
                 </Button>
               </Link>

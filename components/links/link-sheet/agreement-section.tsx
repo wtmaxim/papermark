@@ -106,7 +106,7 @@ export default function AgreementSection({
                 onValueChange={handleAgreementChange}
                 defaultValue={agreementId ?? ""}
               >
-                <SelectTrigger className="focus:ring-offset-3 flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6">
+                <SelectTrigger className="focus:ring-offset-3 flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6">
                   <SelectValue placeholder="Select an agreement" />
                 </SelectTrigger>
                 <SelectContent>

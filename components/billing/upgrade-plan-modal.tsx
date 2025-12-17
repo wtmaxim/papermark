@@ -53,9 +53,9 @@ const FeatureItem = ({ feature }: { feature: Feature }) => {
       <div className={cn("justify-between gap-x-8", baseClasses)}>
         <div className="flex items-center gap-x-3">
           {feature.isNotIncluded ? (
-            <XIcon className="h-5 w-5 shrink-0 text-gray-500" />
+            <XIcon className="h-5 w-5 flex-shrink-0 text-gray-500" />
           ) : (
-            <CheckIcon className="h-5 w-5 shrink-0 text-[#fb7a00]" />
+            <CheckIcon className="h-5 w-5 flex-shrink-0 text-[#fb7a00]" />
           )}
           <span>{feature.text}</span>
         </div>
@@ -80,9 +80,9 @@ const FeatureItem = ({ feature }: { feature: Feature }) => {
   return (
     <div className={cn("text-sm", baseClasses)}>
       {feature.isNotIncluded ? (
-        <XIcon className="mr-3 h-5 w-5 shrink-0 text-gray-500" />
+        <XIcon className="mr-3 h-5 w-5 flex-shrink-0 text-gray-500" />
       ) : (
-        <CheckIcon className="mr-3 h-5 w-5 shrink-0 text-[#fb7a00]" />
+        <CheckIcon className="mr-3 h-5 w-5 flex-shrink-0 text-[#fb7a00]" />
       )}
       <div className="flex items-center gap-2">
         <span>{feature.text}</span>
@@ -267,7 +267,7 @@ export function UpgradePlanModal({
                         isDataRoomsUpgrade
                       ? "border-gray-900"
                       : "border-gray-200"
-                } bg-white p-6 shadow-xs dark:bg-gray-900`}
+                } bg-white p-6 shadow-sm dark:bg-gray-900`}
               >
                 <div className="mb-4 border-b border-gray-200 pb-2">
                   <div className="flex items-center justify-between">
@@ -331,7 +331,7 @@ export function UpgradePlanModal({
                 <div className="mt-auto">
                   <Button
                     variant={
-                      planOption === PlanEnum.Business ? "default" : "outline-solid"
+                      planOption === PlanEnum.Business ? "default" : "outline"
                     }
                     className={`w-full py-2 text-sm ${
                       planOption === PlanEnum.Business

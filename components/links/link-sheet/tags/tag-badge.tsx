@@ -32,7 +32,7 @@ export default function TagBadge({
       {withIcon && (
         <TagIcon
           className={cn(
-            "size-5! shrink-0 p-0.5 dark:text-primary-foreground",
+            "!size-5 shrink-0 p-0.5 dark:text-primary-foreground",
             isSelected && `bg-${color}-100 rounded-sm border border-gray-200`,
           )}
         />

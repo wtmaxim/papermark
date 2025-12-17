@@ -128,7 +128,7 @@ export default function NdaAgreements() {
                 <AgreementsUpgradeButton
                   text="Create NDA Agreements"
                   trigger="nda_agreements_page_empty_state"
-                  variant="outline-solid"
+                  variant="outline"
                 />
               )}
             </div>

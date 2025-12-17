@@ -54,7 +54,7 @@ const CustomTooltip = ({
           >
             <div className="text-overflow-ellipsis flex items-center space-x-2 overflow-hidden whitespace-nowrap">
               <span
-                className={`bg-${getColorForVersion(item.dataKey)}-500 h-2.5 w-2.5 shrink-0 rounded-full`}
+                className={`bg-${getColorForVersion(item.dataKey)}-500 h-2.5 w-2.5 flex-shrink-0 rounded-full`}
                 aria-hidden="true"
               ></span>
               <p className="text-overflow-ellipsis overflow-hidden whitespace-nowrap text-tremor-content dark:text-dark-tremor-content">

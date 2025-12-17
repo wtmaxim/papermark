@@ -49,7 +49,7 @@ export function UploadNotificationDrawer({
         onOpenChange={onOpenChangeHandler}
         dismissible={false}
       >
-        <DrawerContent className="inset-x-auto right-6 max-h-[250px] w-1/5 min-w-[350px] max-w-[400px] shadow-md focus-visible:outline-hidden">
+        <DrawerContent className="inset-x-auto right-6 max-h-[250px] w-1/5 min-w-[350px] max-w-[400px] shadow-md focus-visible:outline-none">
           <DrawerHeader className="flex h-10 items-center justify-between rounded-t-lg border-b border-transparent bg-gray-100 dark:bg-gray-900">
             <div className="flex items-center space-x-1">
               <DrawerTitle>{uploadCount} uploads</DrawerTitle>
@@ -62,7 +62,7 @@ export function UploadNotificationDrawer({
               ) : null}
             </div>
             <DrawerClose
-              className="rounded-full p-1 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="rounded-full p-1 hover:bg-gray-200 hover:dark:bg-gray-800"
               onClick={handleCloseDrawer}
             >
               <XIcon className="h-6 w-6" />

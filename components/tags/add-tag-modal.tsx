@@ -132,7 +132,7 @@ export function AddTagsModal({
                 }));
               }
             }}
-            className="my-2 shrink-0 flex-wrap justify-start! gap-3"
+            className="my-2 flex-shrink-0 flex-wrap !justify-start gap-3"
           >
             {COLORS_LIST.map((li) => (
               <ToggleGroupItem

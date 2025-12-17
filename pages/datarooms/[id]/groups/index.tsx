@@ -59,7 +59,7 @@ export default function DataroomGroupPage() {
           <DataroomNavigation dataroomId={dataroom.id} />
         </header>
 
-        <Tabs defaultValue="groups" className="mt-4! space-y-4">
+        <Tabs defaultValue="groups" className="!mt-4 space-y-4">
           <TabsList>
             <TabsTrigger value="links" asChild>
               <Link href={`/datarooms/${dataroom.id}/permissions`}>Links</Link>
@@ -114,7 +114,7 @@ export default function DataroomGroupPage() {
                     <div className="hidden rounded-full border border-gray-200 sm:block">
                       <div
                         className={cn(
-                          "rounded-full border border-white bg-linear-to-t from-gray-100 p-1 md:p-3",
+                          "rounded-full border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3",
                         )}
                       >
                         <UsersIcon className="size-6" />

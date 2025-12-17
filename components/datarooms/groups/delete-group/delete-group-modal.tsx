@@ -100,7 +100,7 @@ function DeleteGroupModal({
             <span className="font-semibold text-foreground">{groupName}</span>{" "}
             to continue:
           </label>
-          <div className="relative mt-1 rounded-md shadow-xs">
+          <div className="relative mt-1 rounded-md shadow-sm">
             <Input
               type="text"
               name="group-name"
@@ -109,7 +109,7 @@ function DeleteGroupModal({
               autoComplete="off"
               required
               pattern={groupName}
-              className="bg-white dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent"
+              className="bg-white dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent"
             />
           </div>
         </div>

@@ -100,7 +100,7 @@ export default function Invoices() {
               </div>
             ) : invoices.length === 0 ? (
               <div className="flex flex-col items-center justify-center gap-4 py-12">
-                <div className="rounded-full border border-white bg-linear-to-t from-gray-100 p-3">
+                <div className="rounded-full border border-white bg-gradient-to-t from-gray-100 p-3">
                   <FileText className="size-6" />
                 </div>
                 <div className="text-center">

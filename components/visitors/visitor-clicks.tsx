@@ -63,7 +63,7 @@ export default function VisitorClicks({
         <div className="space-y-4">
           {clickEvents.data.map((event, index) => (
             <div key={index} className="flex items-start space-x-3">
-              <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-gray-400" />
+              <ExternalLink className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-400" />
               <div className="space-y-1">
                 <div className="text-sm">
                   <span className="font-medium">Page {event.page_number}</span>:{" "}

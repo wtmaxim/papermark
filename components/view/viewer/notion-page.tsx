@@ -253,7 +253,7 @@ export const NotionPage = ({
 
     return () => {
       window.removeEventListener("focus", handleFocus);
-      window.removeEventListener("blur-sm", handleBlur);
+      window.removeEventListener("blur", handleBlur);
     };
   }, [screenshotProtectionEnabled]);
 

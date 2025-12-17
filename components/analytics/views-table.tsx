@@ -85,7 +85,7 @@ const columns: ColumnDef<View>[] = [
       <div className="flex items-center overflow-visible sm:space-x-3">
         <VisitorAvatar viewerEmail={row.original.viewerEmail} />
         <div className="min-w-0 flex-1">
-          <div className="focus:outline-hidden">
+          <div className="focus:outline-none">
             <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
               {row.original.viewerEmail ? (
                 <>
@@ -347,14 +347,14 @@ export default function ViewsTable({
           text="Export"
           clickedPlan={PlanEnum.Pro}
           trigger="dashboard_views_export"
-          variant="outline-solid"
+          variant="outline"
           size="sm"
         />
       );
     } else {
       return (
         <Button variant="outline" size="sm" onClick={handleExport}>
-          <Download className="size-4!" />
+          <Download className="!size-4" />
           Export
         </Button>
       );

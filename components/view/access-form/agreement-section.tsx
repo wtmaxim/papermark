@@ -36,7 +36,7 @@ export default function AgreementSection({
       <Checkbox
         id="agreement"
         onCheckedChange={handleCheckChange}
-        className="border border-gray-400 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-gray-300 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-(--dynamic-accent-color) data-[state=checked]:bg-(--dynamic-accent-color) data-[state=checked]:text-(--dynamic-accent-color)"
+        className="border border-gray-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-300 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-[var(--dynamic-accent-color)] data-[state=checked]:bg-[var(--dynamic-accent-color)] data-[state=checked]:text-[var(--dynamic-accent-color)]"
         style={
           {
             borderColor: determineTextColor(brand?.accentColor),

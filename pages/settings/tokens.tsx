@@ -118,7 +118,7 @@ export default function TokenSettings() {
 
         <div className="rounded-lg border border-gray-200 bg-white">
           <div className="flex flex-col items-center justify-between gap-4 space-y-3 border-b border-gray-200 p-5 sm:flex-row sm:space-y-0 sm:p-10">
-            <div className="flex max-w-(--breakpoint-sm) flex-col space-y-3">
+            <div className="flex max-w-screen-sm flex-col space-y-3">
               <div className="flex items-center gap-2">
                 <h2 className="text-xl font-medium text-gray-900">
                   API Tokens

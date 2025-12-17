@@ -172,7 +172,7 @@ export function DocumentAIDialog({
                   onClick={handleIndexDocument}
                   disabled={indexing}
                   size="sm"
-                  variant={isIndexed ? "outline-solid" : "default"}
+                  variant={isIndexed ? "outline" : "default"}
                 >
                   {indexing ? (
                     <>

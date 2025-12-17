@@ -62,7 +62,7 @@ const columns: ColumnDef<Visitor>[] = [
       <div className="flex items-center overflow-visible sm:space-x-3">
         <VisitorAvatar viewerEmail={row.original.email} />
         <div className="min-w-0 flex-1">
-          <div className="focus:outline-hidden">
+          <div className="focus:outline-none">
             <p className="flex items-center gap-x-2 overflow-visible text-sm font-medium text-gray-800 dark:text-gray-200">
               {row.original.viewerName || row.original.email}{" "}
               {row.original.verified && (
@@ -279,14 +279,14 @@ export default function VisitorsTable({
           text="Export"
           clickedPlan={PlanEnum.Pro}
           trigger="dashboard_visitors_export"
-          variant="outline-solid"
+          variant="outline"
           size="sm"
         />
       );
     } else {
       return (
         <Button variant="outline" size="sm" onClick={handleExport}>
-          <Download className="size-4!" />
+          <Download className="!size-4" />
           Export
         </Button>
       );
@@ -341,7 +341,7 @@ export default function VisitorsTable({
                 >
                   <div className="flex w-full flex-col items-center justify-center gap-4 rounded-xl py-4">
                     <div className="hidden rounded-full sm:block">
-                      <div className="rounded-full border border-white bg-linear-to-t from-gray-100 p-1 md:p-3">
+                      <div className="rounded-full border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3">
                         <UserIcon className="size-6" />
                       </div>
                     </div>

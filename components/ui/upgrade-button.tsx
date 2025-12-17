@@ -12,7 +12,7 @@ interface UpgradeButtonProps {
   text: string;
   clickedPlan: PlanEnum;
   trigger: string;
-  variant?: "default" | "outline-solid" | "ghost";
+  variant?: "default" | "outline" | "ghost";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
   highlightItem?: string[];

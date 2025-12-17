@@ -235,7 +235,7 @@ export default function DocumentsCard({
     <>
       <div
         className={cn(
-          "group/row relative flex items-center justify-between gap-x-2 rounded-lg border-0 bg-white p-3 ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 dark:hover:ring-gray-500 sm:p-4",
+          "group/row relative flex items-center justify-between gap-x-2 rounded-lg border-0 bg-white p-3 ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 hover:dark:ring-gray-500 sm:p-4",
           isHovered && "bg-secondary ring-gray-300 dark:ring-gray-500",
         )}
       >
@@ -342,7 +342,7 @@ export default function DocumentsCard({
               <Button
                 // size="icon"
                 variant="outline"
-                className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
+                className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
               >
                 <span className="sr-only">Open menu</span>
                 <MoreVertical className="h-4 w-4" />

@@ -192,7 +192,7 @@ export function UpgradePlanModal({
                 onClick={() =>
                   setPeriod(period === "monthly" ? "yearly" : "monthly")
                 }
-                className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-gray-800 dark:hover:text-muted-foreground/80"
+                className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-gray-800 hover:dark:text-muted-foreground/80"
               >
                 {period === "monthly"
                   ? plan === "Business"
@@ -279,7 +279,7 @@ export function UpgradePlanModal({
             {plan === "Business" && !isTrial ? (
               <DataroomTrialModal>
                 <button
-                  className="underline-offset-4 transition-all hover:text-gray-800 hover:underline dark:hover:text-muted-foreground/80"
+                  className="underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
                   onClick={() => analytics.capture("Dataroom Trial Clicked")}
                 >
                   Looking for a trial?
@@ -289,7 +289,7 @@ export function UpgradePlanModal({
               <a
                 href="https://cal.com/marcseitz/paperky"
                 target="_blank"
-                className="underline-offset-4 transition-all hover:text-gray-800 hover:underline dark:hover:text-muted-foreground/80"
+                className="underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
               >
                 Looking for Paperky Enterprise?
               </a>

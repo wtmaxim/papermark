@@ -50,7 +50,7 @@ export default function DataroomChoice({ dataroomId }: { dataroomId: string }) {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
           <FolderIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p className="text-lg font-medium">Create from Scratch</p>
@@ -68,7 +68,7 @@ export default function DataroomChoice({ dataroomId }: { dataroomId: string }) {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
           <FileTextIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p className="text-lg font-medium">Use a Template</p>
@@ -86,7 +86,7 @@ export default function DataroomChoice({ dataroomId }: { dataroomId: string }) {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-orange-50 dark:hover:bg-orange-900/20 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-orange-50 hover:dark:bg-orange-900/20 md:p-10"
         >
           <Sparkles className="pointer-events-none h-auto w-12 sm:w-12 text-orange-500" />
           <p className="text-lg font-medium text-orange-600 dark:text-orange-400">

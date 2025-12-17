@@ -191,7 +191,7 @@ export default function DataroomTemplates({
               key={template.id}
               onClick={() => handleTemplateSelect(template.id)}
               disabled={loading}
-              className="relative flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
+              className="relative flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
             >
               <Icon className="pointer-events-none h-auto w-12 sm:w-12" />
               <p>{template.name}</p>

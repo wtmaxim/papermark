@@ -41,7 +41,7 @@ export default function DataroomAnalyticsPage() {
           <DataroomNavigation dataroomId={dataroom.id} />
         </header>
 
-        <Tabs defaultValue="links" className="mt-4! space-y-4">
+        <Tabs defaultValue="links" className="!mt-4 space-y-4">
           <TabsList>
             <TabsTrigger value="links">Links</TabsTrigger>
             <TabsTrigger value="groups" asChild>
@@ -50,7 +50,7 @@ export default function DataroomAnalyticsPage() {
           </TabsList>
 
           <TabsContent value="links" className="space-y-4">
-            <div className="mt-8! flex items-center gap-x-2">
+            <div className="!mt-8 flex items-center gap-x-2">
               <div className="space-y-1">
                 <h3 className="text-lg font-semibold tracking-tight text-foreground">
                   Links

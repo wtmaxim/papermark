@@ -49,7 +49,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
           <FileIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p className="text-lg font-medium">Document</p>
@@ -66,7 +66,7 @@ export default function Next() {
               },
             })
           }
-          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 md:p-10"
+          className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
           <ServerIcon className="pointer-events-none h-auto w-12 sm:w-12" />
           <p className="text-lg font-medium">Data Room</p>
@@ -78,7 +78,7 @@ export default function Next() {
 
       {/* <motion.div variants={STAGGER_CHILD_VARIANTS} className="text-center">
         <button
-          className="text-center text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline dark:hover:text-muted-foreground/80"
+          className="text-center text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
           onClick={() =>
             router.push({
               pathname: "/welcome",

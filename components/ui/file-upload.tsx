@@ -25,11 +25,11 @@ const acceptFileTypes: Record<
 };
 
 const imageUploadVariants = cva(
-  "group relative isolate flex aspect-1200/630 w-full flex-col items-center justify-center overflow-hidden bg-white transition-all hover:bg-gray-50",
+  "group relative isolate flex aspect-[1200/630] w-full flex-col items-center justify-center overflow-hidden bg-white transition-all hover:bg-gray-50",
   {
     variants: {
       variant: {
-        default: "rounded-md border border-gray-300 shadow-xs",
+        default: "rounded-md border border-gray-300 shadow-sm",
         plain: "",
       },
     },
@@ -191,12 +191,12 @@ export function FileUpload({
       )}
     >
       {loading && (
-        <div className="absolute inset-0 z-5 flex items-center justify-center rounded-[inherit] bg-white">
+        <div className="absolute inset-0 z-[5] flex items-center justify-center rounded-[inherit] bg-white">
           <LoaderCircle />
         </div>
       )}
       <div
-        className="absolute inset-0 z-5"
+        className="absolute inset-0 z-[5]"
         onDragOver={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -221,7 +221,7 @@ export function FileUpload({
       />
       <div
         className={cn(
-          "absolute inset-0 z-3 flex flex-col items-center justify-center rounded-[inherit] border-2 border-transparent bg-white transition-all",
+          "absolute inset-0 z-[3] flex flex-col items-center justify-center rounded-[inherit] border-2 border-transparent bg-white transition-all",
           disabled && "bg-gray-50",
           dragActive &&
             !disabled &&
@@ -274,7 +274,7 @@ export function FileUpload({
           />
         ))}
       {clickToUpload && (
-        <div className="sr-only mt-1 flex shadow-xs">
+        <div className="sr-only mt-1 flex shadow-sm">
           <input
             key={fileName} // Gets us a fresh input every time a file is uploaded
             type="file"

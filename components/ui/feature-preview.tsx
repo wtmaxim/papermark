@@ -75,11 +75,11 @@ export function FeaturePreview({
       <div className="pointer-events-none">{children}</div>
 
       {/* Gradient overlay that fades the content into the upgrade section */}
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90" />
 
       {/* Upgrade prompt positioned at the bottom */}
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pb-8">
-        <Card className="max-w-md border-2 border-primary/20 bg-background/95 shadow-lg backdrop-blur-xs">
+        <Card className="max-w-md border-2 border-primary/20 bg-background/95 shadow-lg backdrop-blur-sm">
           <CardHeader className="text-center">
             <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
               <LockIcon className="h-6 w-6 text-primary" />

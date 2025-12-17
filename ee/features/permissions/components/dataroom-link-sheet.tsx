@@ -698,7 +698,7 @@ export function DataroomLinkSheet({
             className="flex grow flex-col"
             onSubmit={(e) => handleSubmit(e, false)}
           >
-            <ScrollArea className="grow">
+            <ScrollArea className="flex-grow">
               <div className="h-0 flex-1">
                 <div className="flex flex-1 flex-col justify-between pb-6">
                   <div className="divide-y divide-gray-200">
@@ -847,7 +847,7 @@ export function DataroomLinkSheet({
                               }}
                               defaultValue={data.groupId ?? undefined}
                             >
-                              <SelectTrigger className="focus:ring-offset-3 flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6">
+                              <SelectTrigger className="focus:ring-offset-3 flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6">
                                 <SelectValue placeholder="Select an group" />
                               </SelectTrigger>
                               <SelectContent>
@@ -996,7 +996,7 @@ export function DataroomLinkSheet({
                     (linkType === LinkType.DATAROOM_LINK &&
                       data?.audienceType === LinkAudienceType.GROUP)
                       ? "default"
-                      : "outline-solid"
+                      : "outline"
                   }
                   loading={isSaving}
                   onClick={(e) => handleSubmit(e, false)}

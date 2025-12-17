@@ -238,7 +238,7 @@ export function RichTextEditor({
       <div className="min-h-[200px] p-3">
         <EditorContent
           editor={editor}
-          className="prose prose-sm max-w-none focus:outline-hidden [&_.ProseMirror]:min-h-[150px] focus:[&_.ProseMirror]:outline-hidden"
+          className="prose prose-sm max-w-none focus:outline-none [&_.ProseMirror]:min-h-[150px] [&_.ProseMirror]:focus:outline-none"
         />
       </div>
     </div>

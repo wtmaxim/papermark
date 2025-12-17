@@ -58,7 +58,7 @@ export function Modal({
           }
         }}
       >
-        <Drawer.Overlay className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm" />
+        <Drawer.Overlay className="fixed inset-0 z-50 bg-background/80 backdrop-blur" />
         <Drawer.Portal>
           <Drawer.Content
             className={cn(

@@ -99,7 +99,7 @@ class VideoTracker {
       muted: createDebouncedHandler(500, true),
       unmuted: createDebouncedHandler(500, true),
       focus: createDebouncedHandler(500, true),
-      "blur-sm": createDebouncedHandler(500, true),
+      blur: createDebouncedHandler(500, true),
       enterfullscreen: createDebouncedHandler(500, true),
       exitfullscreen: createDebouncedHandler(500, true),
     };
@@ -344,7 +344,7 @@ class VideoTracker {
       if (this.isPlaying) {
         this.trackEvent("played", undefined, true);
       }
-      this.trackEvent("blur-sm", undefined, true);
+      this.trackEvent("blur", undefined, true);
     } else if (isVisible) {
       this.hasTrackedUnload = false;
       this.trackEvent("focus");

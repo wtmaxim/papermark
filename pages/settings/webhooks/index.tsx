@@ -78,7 +78,7 @@ export default function WebhookSettings() {
                   className="rounded-xl border border-gray-200 bg-white p-4 transition-[filter] dark:border-gray-400 dark:bg-secondary sm:p-5"
                 >
                   <div className="flex items-center gap-x-3">
-                    {/* <div className="rounded-md border border-gray-200 bg-linear-to-t from-gray-100 p-2.5">
+                    {/* <div className="rounded-md border border-gray-200 bg-gradient-to-t from-gray-100 p-2.5">
                       <Avatar className="size-6">
                         <AvatarFallback>
                           {webhook.name.slice(0, 2).toUpperCase()}

@@ -87,7 +87,7 @@ export default function VideoViewer({
 
     return () => {
       window.removeEventListener("focus", handleFocus);
-      window.removeEventListener("blur-sm", handleBlur);
+      window.removeEventListener("blur", handleBlur);
     };
   }, [screenshotProtectionEnabled]);
 

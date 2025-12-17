@@ -684,10 +684,10 @@ export default function LinksTable({
                         <TableCell className="flex items-center gap-x-2 sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
                           <div
                             className={cn(
-                              `group/cell relative flex w-full items-center gap-x-4 overflow-hidden truncate rounded-sm px-3 py-1.5 text-center text-secondary-foreground transition-all group-hover/row:ring-1 group-hover/row:ring-gray-400 dark:group-hover/row:ring-gray-100 md:py-1`,
+                              `group/cell relative flex w-full items-center gap-x-4 overflow-hidden truncate rounded-sm px-3 py-1.5 text-center text-secondary-foreground transition-all group-hover/row:ring-1 group-hover/row:ring-gray-400 group-hover/row:dark:ring-gray-100 md:py-1`,
                               link.domainId && isFree
-                                ? "bg-destructive hover:bg-red-700 dark:hover:bg-red-200"
-                                : "bg-secondary hover:bg-emerald-700 dark:hover:bg-emerald-200",
+                                ? "bg-destructive hover:bg-red-700 hover:dark:bg-red-200"
+                                : "bg-secondary hover:bg-emerald-700 hover:dark:bg-emerald-200",
                               popoverOpen === link.id &&
                                 "ring-1 ring-gray-400 dark:ring-gray-100",
                             )}
@@ -908,7 +908,7 @@ export default function LinksTable({
                             <DropdownMenuTrigger asChild>
                               <Button
                                 variant="ghost"
-                                className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 dark:group-hover/row:ring-gray-700"
+                                className="h-8 w-8 p-0 group-hover/row:ring-1 group-hover/row:ring-gray-200 group-hover/row:dark:ring-gray-700"
                               >
                                 <span className="sr-only">Open menu</span>
                                 <MoreHorizontal className="h-4 w-4" />
@@ -1004,7 +1004,7 @@ export default function LinksTable({
                       <div className="hidden rounded-full sm:block">
                         <div
                           className={cn(
-                            "rounded-full border border-white bg-linear-to-t from-gray-100 p-1 md:p-3",
+                            "rounded-full border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3",
                           )}
                         >
                           <LinkIcon className="size-6" />

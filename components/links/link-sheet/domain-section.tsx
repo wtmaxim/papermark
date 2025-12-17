@@ -163,15 +163,15 @@ export default function DomainSection({
         >
           <SelectTrigger
             className={cn(
-              "flex h-10 w-full rounded-none rounded-l-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm",
+              "flex h-10 w-full rounded-none rounded-l-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm",
               data.domain && data.domain !== "paperky.com"
                 ? ""
-                : "border-r rounded-r-md",
+                : "border-r-1 rounded-r-md",
             )}
           >
             <SelectValue placeholder="Select a domain" />
           </SelectTrigger>
-          <SelectContent className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-hidden focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 dark:focus:bg-transparent sm:text-sm">
+          <SelectContent className="flex w-full rounded-md border border-input bg-white text-foreground placeholder-muted-foreground focus:border-muted-foreground focus:outline-none focus:ring-inset focus:ring-muted-foreground dark:border-gray-500 dark:bg-gray-800 focus:dark:bg-transparent sm:text-sm">
             <SelectItem value="paperky.com" className="hover:bg-muted">
               paperky.com
             </SelectItem>
@@ -182,7 +182,7 @@ export default function DomainSection({
                     key={slug}
                     value={slug}
                     className={cn(
-                      "hover:bg-muted dark:hover:bg-gray-700",
+                      "hover:bg-muted hover:dark:bg-gray-700",
                       !canUseCustomDomainForDocument && "opacity-50",
                     )}
                   >
@@ -201,7 +201,7 @@ export default function DomainSection({
                     key={slug}
                     value={slug}
                     className={cn(
-                      "hover:bg-muted dark:hover:bg-gray-700",
+                      "hover:bg-muted hover:dark:bg-gray-700",
                       !canUseCustomDomainForDataroom && "opacity-50",
                     )}
                   >
@@ -214,7 +214,7 @@ export default function DomainSection({
               </>
             )}
             <SelectItem
-              className="hover:bg-muted dark:hover:bg-gray-700"
+              className="hover:bg-muted hover:dark:bg-gray-700"
               value={
                 linkType === "DOCUMENT_LINK"
                   ? "add_domain"

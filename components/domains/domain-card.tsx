@@ -92,7 +92,7 @@ export default function DomainCard({
               <div
                 className={cn(
                   "rounded-full",
-                  "border border-white bg-linear-to-t from-gray-100 p-1 md:p-3",
+                  "border border-white bg-gradient-to-t from-gray-100 p-1 md:p-3",
                 )}
               >
                 <GlobeIcon className="size-5" />
@@ -103,7 +103,7 @@ export default function DomainCard({
                 {domain}
 
                 {isDefault ? (
-                  <span className="xs:px-3 xs:py-1 flex items-center gap-1 rounded-full bg-sky-400/15 px-1.5 py-0.5 text-xs font-medium text-sky-600">
+                  <span className="xs:px-3 xs:py-1 flex items-center gap-1 rounded-full bg-sky-400/[.15] px-1.5 py-0.5 text-xs font-medium text-sky-600">
                     <FlagIcon className="hidden h-3 w-3 sm:block" />
                     Default
                   </span>
@@ -176,7 +176,7 @@ export default function DomainCard({
                 <Button
                   // size="icon"
                   variant="outline"
-                  className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-400 dark:hover:border-gray-400 dark:hover:bg-gray-700 lg:h-9 lg:w-9"
+                  className="z-20 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-400 hover:dark:border-gray-400 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
                 >
                   <span className="sr-only">Open menu</span>
                   <MoreVertical className="h-4 w-4" />

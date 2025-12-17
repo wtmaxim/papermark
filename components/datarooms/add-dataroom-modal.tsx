@@ -626,10 +626,10 @@ export function AddDataroomModal({
           </TabsList>
 
           <TabsContent value="create">
-            <Card className="relative outline-hidden focus:outline-hidden">
+            <Card className="relative outline-none focus:outline-none">
               <button
                 onClick={() => onOpenChange(false)}
-                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <XIcon className="h-4 w-4" />
                 <span className="sr-only">Close</span>
@@ -643,7 +643,7 @@ export function AddDataroomModal({
               <CardContent className="space-y-2">
                 <form
                   onSubmit={handleSubmit}
-                  className="flex flex-col space-y-4 outline-hidden"
+                  className="flex flex-col space-y-4 outline-none"
                 >
                   <div className="space-y-1">
                     <Label htmlFor="dataroom-name-create">
@@ -666,10 +666,10 @@ export function AddDataroomModal({
           </TabsContent>
 
           <TabsContent value="generate">
-            <Card className="relative outline-hidden focus:outline-hidden">
+            <Card className="relative outline-none focus:outline-none">
               <button
                 onClick={() => onOpenChange(false)}
-                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <XIcon className="h-4 w-4" />
                 <span className="sr-only">Close</span>
@@ -683,7 +683,7 @@ export function AddDataroomModal({
               <CardContent className="space-y-4">
                 <form
                   onSubmit={handleSubmit}
-                  className="flex flex-col space-y-4 outline-hidden"
+                  className="flex flex-col space-y-4 outline-none"
                 >
                   <div className="space-y-2">
                     <Label>
@@ -703,7 +703,7 @@ export function AddDataroomModal({
                             className={`relative flex min-h-[120px] flex-col items-center justify-center space-y-3 overflow-hidden p-4 transition-colors ${
                               isSelected
                                 ? "bg-gray-200 dark:bg-gray-800"
-                                : "hover:bg-gray-100 dark:hover:bg-gray-800"
+                                : "hover:bg-gray-100 hover:dark:bg-gray-800"
                             }`}
                           >
                             <Icon className="pointer-events-none h-auto w-10 text-foreground" />
@@ -727,10 +727,10 @@ export function AddDataroomModal({
           </TabsContent>
 
           <TabsContent value="ai">
-            <Card className="relative outline-hidden focus:outline-hidden">
+            <Card className="relative outline-none focus:outline-none">
               <button
                 onClick={() => onOpenChange(false)}
-                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <XIcon className="h-4 w-4" />
                 <span className="sr-only">Close</span>
@@ -771,7 +771,7 @@ export function AddDataroomModal({
                 ) : (
                   <form
                     onSubmit={handleSubmit}
-                    className="flex flex-col space-y-4 outline-hidden"
+                    className="flex flex-col space-y-4 outline-none"
                   >
                     <div className="space-y-1">
                       <Label htmlFor="dataroom-name-ai">

@@ -91,7 +91,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
         ) : (
           <DropdownMenu>
             <DropdownMenuTrigger asChild className="w-full">
-              <div className="group flex w-full items-center rounded-full text-sm font-semibold leading-6 text-foreground hover:bg-gray-200 dark:hover:bg-secondary lg:gap-x-3 lg:rounded-md lg:p-2">
+              <div className="group flex w-full items-center rounded-full text-sm font-semibold leading-6 text-foreground hover:bg-gray-200 hover:dark:bg-secondary lg:gap-x-3 lg:rounded-md lg:p-2">
                 {session?.user?.image ? (
                   <Image
                     className="h-7 w-7 rounded-full bg-secondary"
@@ -123,10 +123,10 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
             <DropdownMenuContent className="mr-2 px-0 pb-2 lg:mr-0 lg:w-[240px] xl:w-[270px]">
               {session ? (
                 <>
-                  <DropdownMenuLabel className="mt-2 truncate py-[3px]! px-3 text-sm text-muted-foreground">
+                  <DropdownMenuLabel className="mt-2 truncate !py-[3px] px-3 text-sm text-muted-foreground">
                     {session?.user?.email}
                   </DropdownMenuLabel>
-                  <DropdownMenuSeparator className="my-2!" />
+                  <DropdownMenuSeparator className="!my-2" />
                   <ModeToggle />
 
                   <button
@@ -169,7 +169,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
 
       <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
         <DialogContent className="max-w-[550px] gap-0 overflow-hidden border-none p-0 shadow-lg">
-          <Command className="**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 **:[[cmdk-input]]:h-12 **:[[cmdk-item]]:px-2 **:[[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
+          <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
             <CommandInput
               placeholder="Search help articles..."
               className="h-14 border-none px-4 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"

@@ -117,7 +117,7 @@ export const BlockingModal = () => {
       {/* <div className="flex w-full px-4">
         {shouldShowBanner && (
           <div className="flex w-full items-center gap-3 rounded-md border border-yellow-200 bg-yellow-50 p-4 text-sm dark:border-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-100">
-            <div className="shrink-0">
+            <div className="flex-shrink-0">
               <InfoIcon className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
             </div>
             <div className="flex-1">
@@ -146,7 +146,7 @@ export const BlockingModal = () => {
       <AlertDialog open={!!shouldShowModal} onOpenChange={setShowModal}>
         <AlertDialogContent
           className="w-full max-w-lg"
-          overlayClassName="backdrop-blur-sm"
+          overlayClassName="backdrop-blur"
           onContextMenu={(e) => e.preventDefault()}
         >
           <AlertDialogHeader className="flex flex-col items-center text-center">

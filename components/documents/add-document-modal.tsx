@@ -593,7 +593,7 @@ export function AddDocumentModal({
                             <Link
                               href="https://www.paperky.com/help/article/document-types"
                               target="_blank"
-                              className="underline underline-offset-4 transition-all hover:text-muted-foreground/80 dark:hover:text-muted-foreground/80"
+                              className="underline underline-offset-4 transition-all hover:text-muted-foreground/80 hover:dark:text-muted-foreground/80"
                             >
                               file types
                             </Link>{" "}
@@ -623,7 +623,7 @@ export function AddDocumentModal({
                       <div className="flex justify-center">
                         <button
                           type="button"
-                          className="text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline dark:hover:text-muted-foreground/80"
+                          className="text-sm text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
                           onClick={(e) => {
                             e.stopPropagation();
                             document
@@ -676,7 +676,7 @@ export function AddDocumentModal({
                             name="notion-link"
                             id="notion-link"
                             placeholder="notion.site/..."
-                            className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-xs ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
+                            className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
                             value={notionLink || ""}
                             onChange={(e) => setNotionLink(e.target.value)}
                           />

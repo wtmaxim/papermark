@@ -31,7 +31,7 @@ export default function InvitationStatusContent({
     <div className="flex flex-col items-center space-y-6">
       <div className="w-full text-center">
         <h3 className="text-2xl font-bold text-gray-800">{config.title}</h3>
-        <p className="mx-auto mt-2 max-w-xs whitespace-pre-line wrap-break-word text-sm text-gray-600">
+        <p className="mx-auto mt-2 max-w-xs whitespace-pre-line break-words text-sm text-gray-600">
           {config.message}
         </p>
       </div>
